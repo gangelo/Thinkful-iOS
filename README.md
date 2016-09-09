@@ -3,7 +3,7 @@
 ![N|Solid](https://cldup.com/vkMWNVd08U.png)
 
 ## Overview
-This Thinkful-iOS repository contains xcode projects and playgrounds written for the iPhone in Swift 3.0. The content of this repository is the result of going through the [Thinkful][thinkful] __iOS Programming in Swift course__.
+This Thinkful-iOS repository contains xcode projects and playgrounds written for the iPhone in Swift 3.0. The content of this repository is the result of going through the [Thinkful][thinkful] _iOS Programming in Swift course_.
 
 ## Finding Your Way Around
 This repository consists of a hierarchal series of folders corresponding to the course material, which is broken down into **_units_**, **_lessons_** and finally **_projects_** and **_playgrounds_**  in the following manner:
