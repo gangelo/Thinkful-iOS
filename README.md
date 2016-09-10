@@ -1,4 +1,4 @@
-# Thinkful iOS Repositories
+# Thinkful-iOS Repository
 
 ![N|Solid](https://cldup.com/vkMWNVd08U.png)
 
@@ -24,8 +24,8 @@ Below is a table of projects and playgrounds that might be of interest to you. R
 projects and playgrounds, have been omitted.
 
 | Project        | Description | 
-| ------------- |-------------|
-| [FizzBuzz Game Playground][fizz_buzz]      | You start counting up from 1 to 100. Every number evenly divisible by 3 (3, 6, 9, etc.) is replaced with the word “Fizz.” Every number evenly divisible by 5 (5, 10, 15, etc.) is replaced with the word “Buzz.” Every number evenly divisible by both 3 and 5 (15, 30, 45, etc.) is replaced with the word FizzBuzz. 
+|:-------------|:-------------|
+| [FizzBuzz Game Playground][fizz_buzz]      | You start counting up from 1 to 100. Every number evenly divisible by 3 (3, 6, 9, etc.) is replaced with the word “Fizz.” Every number evenly divisible by 5 (5, 10, 15, etc.) is replaced with the word “Buzz.” Every number evenly divisible by both 3 and 5 (15, 30, 45, etc.) is replaced with the word FizzBuzz. |
 | [XCPlaygroundPage Playground][xc_playground_page]       | Shows how to use XCPlaygroundPage to display a UIView object in the playground.  |
 | [VisualShapes Playground][visual_shapes]       | Example of subclassing UIView to create a Shape class, used as a base class for other various shape classes. Uses XCPlaygroundPage to display the various shapes (views).  |
 | [Fibonacci Sequence Playground][fibonacci_sequence1]      | By definition, the first two numbers in the Fibonacci sequence are 1 and 1, or 0 and 1, depending on the chosen starting point of the sequence, and each subsequent number is the sum of the previous two. That's the only debatable part of the sequence. After that you can calculate the next number by adding the previous two numbers together. For more information on the Fibonacci Sequence, visit [Wikipedia][fibonacci_definition] |
