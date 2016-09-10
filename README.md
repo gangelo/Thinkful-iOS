@@ -24,7 +24,7 @@ Below is a table of projects and playgrounds that might be of interest to you. R
 projects and playgrounds, have been omitted.
 
 | Project        | Description | 
-| ------------- |-------------|
+|:-------------|:-------------|
 | [FizzBuzz Game Playground][fizz_buzz]      | You start counting up from 1 to 100. Every number evenly divisible by 3 (3, 6, 9, etc.) is replaced with the word “Fizz.” Every number evenly divisible by 5 (5, 10, 15, etc.) is replaced with the word “Buzz.” Every number evenly divisible by both 3 and 5 (15, 30, 45, etc.) is replaced with the word FizzBuzz. |
 | [XCPlaygroundPage Playground][xc_playground_page]       | Shows how to use XCPlaygroundPage to display a UIView object in the playground.  |
 | [VisualShapes Playground][visual_shapes]       | Example of subclassing UIView to create a Shape class, used as a base class for other various shape classes. Uses XCPlaygroundPage to display the various shapes (views).  |
