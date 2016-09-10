@@ -1,4 +1,4 @@
-# Thinkful iOS Repository
+# Thinkful-iOS Repository
 
 ![N|Solid](https://cldup.com/vkMWNVd08U.png)
 
