@@ -99,7 +99,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let lion2 = Lion(runningSpeedInSeconds: 0.9)
         lion2.position = CGPointMake(60, 200)
-        addChild(lion2)    }
+        addChild(lion2)
+    }
     
     func addPajama(pajama: Pajama) {
         let randomX = CGFloat(arc4random() % UInt32(playRect.width))
