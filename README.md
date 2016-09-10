@@ -31,6 +31,7 @@ projects and playgrounds, have been omitted.
 | [Fibonacci Sequence Playground][fibonacci_sequence1]      | By definition, the first two numbers in the Fibonacci sequence are 1 and 1, or 0 and 1, depending on the chosen starting point of the sequence, and each subsequent number is the sum of the previous two. That's the only debatable part of the sequence. After that you can calculate the next number by adding the previous two numbers together. For more information on the Fibonacci Sequence, visit [Wikipedia][fibonacci_definition] |
 | [Grayscale Slider iPhone App][grayscale_slider] | Simple iPhone App that changes the background of the main view to various grayscale colors based on user input through a Slider control. Utilizes Referencing Outlet (@IBOutlet) and UI Event (@IBAction) wiring. |
 | [Fibonacci Sequence iPhone App][fibonacci_ios]      | iPhone App that displays the Fibonacci Sequence based on user input parameters. Utilizes various UI controls like UITextView, UIScrollView, UISwitch, UILabel and UISlider; as well as Referencing Outlet (@IBOutlet) and UI Event (@IBAction) wiring. |
+| [RGB Sliders iPhone App][rgb_sliders] | iPhone App that changes the color of a View based on RGB colors input by the user. Utilizes various UI controls like UIView, UISlider, UIButton and UINavigationController; as well as Referencing Outlet (@IBOutlet), UI Event (@IBAction) wiring and Segues. |
 
    [thinkful_swift]: <https://www.thinkful.com/courses/learn-swift-programming-online>
    [thinkful]: <http://thinkful.com>
@@ -41,3 +42,5 @@ projects and playgrounds, have been omitted.
    [fibonacci_definition]: <https://en.wikipedia.org/wiki/Fibonacci_number>
    [fibonacci_ios]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2001/Fibonacci-Sequence-App>
    [grayscale_slider]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2001/Grayscale-Slider>
+   [rgb_sliders]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2002/RGB-Sliders-With-Navigation>
+   
