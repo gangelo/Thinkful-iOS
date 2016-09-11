@@ -10,7 +10,7 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
 | Project        | Description | 
 |:-------------|:-------------|
 | [Subclassing Playground][subclassing_playground]      |  Example of subclassing and instantiating classes.  |
-| [XCPlaygroundPage Playground][xc_playground_page]       | Shows how to use XCPlaygroundPage to display a UIView object in the playground.  |
+| [UIView XCPlaygroundPage Playground][xc_playground_page]       | Shows how to use XCPlaygroundPage to display a UIView object in the playground.  |
 | [VisualShapes Playground][visual_shapes]       | Example of subclassing UIView to create a Shape class, used as a base class for other various shape classes. Uses XCPlaygroundPage to display the various shapes (views).  |
 
    [thinkful]: <http://thinkful.com>
