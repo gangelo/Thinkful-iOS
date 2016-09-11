@@ -12,6 +12,9 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
 |:-------------|:-------------|
 | [RGB Sliders iPhone App (better version)][rgb_sliders_better] | iPhone App that changes the color of a View based on RGB colors input by the user. Utilizes various UI controls like UIView, UISlider, UIButton and UINavigationController; as well as Referencing Outlet (@IBOutlet), UI Event (@IBAction) wiring and Segues. |
 
+## Screenshot
+![screenshot](demo.gif)
+
    [thinkful]: <http://thinkful.com>
    [thinkful_ios_repro]:<https://github.com/gangelo/Thinkful-iOS>
    
