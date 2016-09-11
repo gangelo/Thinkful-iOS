@@ -10,9 +10,10 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
 | Project        | Description | 
 |:-------------|:-------------|
 | [Fibonacci Sequence iPhone App][fibonacci_ios]      | iPhone App that displays the Fibonacci Sequence based on user input parameters. Utilizes various UI controls like UITextView, UIScrollView, UISwitch, UILabel and UISlider; as well as Referencing Outlet (@IBOutlet) and UI Event (@IBAction) wiring. |
+| [Grayscale Slider iPhone App][grayscale_slider] | Simple iPhone App that changes the background of the main view to various grayscale colors based on user input through a Slider control. Utilizes Referencing Outlet (@IBOutlet) and UI Event (@IBAction) wiring. |
 
    [thinkful]: <http://thinkful.com>
    [thinkful_ios_repro]:<https://github.com/gangelo/Thinkful-iOS>
    
    [fibonacci_ios]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2001/Fibonacci-Sequence-App>
-  
+   [grayscale_slider]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2001/Grayscale-Slider>
