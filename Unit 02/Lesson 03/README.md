@@ -19,4 +19,4 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
    [fibonacci_definition]: <https://en.wikipedia.org/wiki/Fibonacci_number>
    [fibonacci_ios]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2001/Fibonacci-Sequence-App>
    [fibonacci_sequence]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2002/Lesson%2003/FibonacciSequence.playground>
-   [fibonacci_sequence_better]: <https://github.com/gangelo/Thinkful-iOS/blob/master/Unit%2002/Lesson%2003/FibonacciSequenceBetterVersion.playground/section-1.swift>
+   [fibonacci_sequence_better]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2002/Lesson%2003/FibonacciSequenceBetterVersion.playground>
