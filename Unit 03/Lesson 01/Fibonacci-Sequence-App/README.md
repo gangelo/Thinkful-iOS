@@ -11,6 +11,9 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
 |:-------------|:-------------|
 | [Fibonacci Sequence iPhone App][fibonacci_ios]      | iPhone App that displays the Fibonacci Sequence based on user input parameters. Utilizes various UI controls like UITextView, UIScrollView, UISwitch, UILabel and UISlider; as well as Referencing Outlet (@IBOutlet) and UI Event (@IBAction) wiring. |
 
+## Screenshoot
+![screenshot](demo.gif)
+
    [thinkful]: <http://thinkful.com>
    [thinkful_ios_repro]:<https://github.com/gangelo/Thinkful-iOS>
    
