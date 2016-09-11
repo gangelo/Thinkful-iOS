@@ -47,7 +47,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-Ja-Lem">
-                                <rect key="frame" x="140" y="345" width="38" height="30"/>
+                                <rect key="frame" x="141" y="345" width="38" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s8R-cg-7bJ">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
@@ -66,21 +66,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="top" secondItem="ARk-Jj-wEx" secondAttribute="bottom" constant="8" symbolic="YES" id="9sY-3M-uDf"/>
-                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="trailing" secondItem="hze-db-2Wp" secondAttribute="trailing" id="C8g-ca-VTP"/>
-                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="centerX" secondItem="c9a-Sy-w3K" secondAttribute="centerX" id="DXp-iH-cNS"/>
-                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JrH-sy-IX2"/>
-                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="140" id="Rpj-6V-YLi"/>
-                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V8P-sF-bi0"/>
-                            <constraint firstItem="hze-db-2Wp" firstAttribute="top" secondItem="0XJ-eY-BtP" secondAttribute="bottom" constant="8" symbolic="YES" id="crE-UM-hUV"/>
-                            <constraint firstItem="zwd-Ja-Lem" firstAttribute="top" secondItem="hze-db-2Wp" secondAttribute="bottom" constant="8" symbolic="YES" id="ftv-Gf-Ybt"/>
-                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="leading" secondItem="0XJ-eY-BtP" secondAttribute="leading" id="hZw-Di-1DX"/>
-                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ic3-bI-Kxn"/>
-                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="lXb-9s-Iip"/>
-                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="trailing" secondItem="0XJ-eY-BtP" secondAttribute="trailing" id="obi-Xu-9Cy"/>
-                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="leading" secondItem="zwd-Ja-Lem" secondAttribute="leading" id="pcT-0H-jCX"/>
-                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="top" secondItem="c9a-Sy-w3K" secondAttribute="bottom" constant="8" symbolic="YES" id="sOa-On-rXt"/>
-                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="leading" secondItem="hze-db-2Wp" secondAttribute="leading" id="skw-Ou-xzA"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="trailing" secondItem="hze-db-2Wp" secondAttribute="trailing" id="0LR-76-9N0"/>
+                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="140" id="2qS-ew-aRW"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="top" secondItem="ARk-Jj-wEx" secondAttribute="bottom" constant="8" symbolic="YES" id="3Un-Yy-4gb"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SkX-VH-bu1"/>
+                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="UcQ-pA-IZR"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="leading" secondItem="hze-db-2Wp" secondAttribute="leading" id="X8P-7d-Py8"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="leading" secondItem="0XJ-eY-BtP" secondAttribute="leading" id="Xzh-ja-YX8"/>
+                            <constraint firstItem="hze-db-2Wp" firstAttribute="top" secondItem="0XJ-eY-BtP" secondAttribute="bottom" constant="8" symbolic="YES" id="ZWb-GS-bbo"/>
+                            <constraint firstItem="zwd-Ja-Lem" firstAttribute="top" secondItem="hze-db-2Wp" secondAttribute="bottom" constant="8" symbolic="YES" id="aAH-YL-CMJ"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="top" secondItem="c9a-Sy-w3K" secondAttribute="bottom" constant="8" symbolic="YES" id="eZT-BN-OSp"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mJG-Lj-tpU"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mzS-WO-HO9"/>
+                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="centerX" secondItem="c9a-Sy-w3K" secondAttribute="centerX" id="qme-4h-MBd"/>
+                            <constraint firstItem="hze-db-2Wp" firstAttribute="centerX" secondItem="zwd-Ja-Lem" secondAttribute="centerX" id="ulf-36-AdY"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="trailing" secondItem="0XJ-eY-BtP" secondAttribute="trailing" id="wz6-PM-7ou"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RGB Sliders" id="dnh-9H-oTf"/>
