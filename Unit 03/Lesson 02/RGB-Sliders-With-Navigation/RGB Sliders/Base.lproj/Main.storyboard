@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nzg-ZQ-wil">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--RGB Sliders-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RGB_Sliders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="c9a-Sy-w3K">
+                                <rect key="frame" x="14" y="231" width="292" height="31"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="saveSliderColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YqZ-Qp-HFf"/>
+                                    <action selector="updateColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="pjh-Cq-079"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="0XJ-eY-BtP">
+                                <rect key="frame" x="14" y="269" width="292" height="31"/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="saveSliderColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPm-ec-syF"/>
+                                    <action selector="updateColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="6mZ-IR-ibV"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="hze-db-2Wp">
+                                <rect key="frame" x="14" y="307" width="292" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="saveSliderColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2je-Vs-a0D"/>
+                                    <action selector="updateColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="OSI-Zs-pHg"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-Jj-wEx">
+                                <rect key="frame" x="140" y="183" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-Ja-Lem">
+                                <rect key="frame" x="140" y="345" width="38" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s8R-cg-7bJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLe-fi-6HT">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                <state key="normal" title="Open"/>
+                                                <connections>
+                                                    <segue destination="rO1-DQ-ATO" kind="show" identifier="openColor" id="JA0-EY-gdp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="top" secondItem="ARk-Jj-wEx" secondAttribute="bottom" constant="8" symbolic="YES" id="9sY-3M-uDf"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="trailing" secondItem="hze-db-2Wp" secondAttribute="trailing" id="C8g-ca-VTP"/>
+                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="centerX" secondItem="c9a-Sy-w3K" secondAttribute="centerX" id="DXp-iH-cNS"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JrH-sy-IX2"/>
+                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="140" id="Rpj-6V-YLi"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V8P-sF-bi0"/>
+                            <constraint firstItem="hze-db-2Wp" firstAttribute="top" secondItem="0XJ-eY-BtP" secondAttribute="bottom" constant="8" symbolic="YES" id="crE-UM-hUV"/>
+                            <constraint firstItem="zwd-Ja-Lem" firstAttribute="top" secondItem="hze-db-2Wp" secondAttribute="bottom" constant="8" symbolic="YES" id="ftv-Gf-Ybt"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="leading" secondItem="0XJ-eY-BtP" secondAttribute="leading" id="hZw-Di-1DX"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ic3-bI-Kxn"/>
+                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="lXb-9s-Iip"/>
+                            <constraint firstItem="c9a-Sy-w3K" firstAttribute="trailing" secondItem="0XJ-eY-BtP" secondAttribute="trailing" id="obi-Xu-9Cy"/>
+                            <constraint firstItem="ARk-Jj-wEx" firstAttribute="leading" secondItem="zwd-Ja-Lem" secondAttribute="leading" id="pcT-0H-jCX"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="top" secondItem="c9a-Sy-w3K" secondAttribute="bottom" constant="8" symbolic="YES" id="sOa-On-rXt"/>
+                            <constraint firstItem="0XJ-eY-BtP" firstAttribute="leading" secondItem="hze-db-2Wp" secondAttribute="leading" id="skw-Ou-xzA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RGB Sliders" id="dnh-9H-oTf"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="hze-db-2Wp" id="j7h-iy-Hti"/>
+                        <outlet property="colorSquare" destination="ARk-Jj-wEx" id="QRT-2a-IK3"/>
+                        <outlet property="greenSlider" destination="0XJ-eY-BtP" id="5r6-Zr-2b2"/>
+                        <outlet property="redSlider" destination="c9a-Sy-w3K" id="qPx-SA-flb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GzL-dl-HUZ">
+            <objects>
+                <viewController id="rO1-DQ-ATO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kgJ-jG-k3p"/>
+                        <viewControllerLayoutGuide type="bottom" id="OMy-4C-boV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZXh-4z-7jH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Awk-Xp-7g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="05C-Mz-MDr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nzg-ZQ-wil" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KeK-ri-8tp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9p6-iy-dW1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1f-ho-hXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="139"/>
+        </scene>
+    </scenes>
+</document>
