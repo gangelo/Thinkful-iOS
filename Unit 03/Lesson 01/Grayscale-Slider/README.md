@@ -11,6 +11,9 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
 |:-------------|:-------------|
 | [Grayscale Slider iPhone App][grayscale_slider] | Simple iPhone App that changes the background of the main view to various grayscale colors based on user input through a Slider control. Utilizes Referencing Outlet (@IBOutlet) and UI Event (@IBAction) wiring. |
 
+## Screenshot
+![screenshot](demo.gif)
+
    [thinkful]: <http://thinkful.com>
    [thinkful_ios_repro]:<https://github.com/gangelo/Thinkful-iOS>
    
