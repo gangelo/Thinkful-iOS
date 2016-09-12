@@ -15,6 +15,7 @@
 		E448F6311D7EBC35002223FD /* BonusRoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448F6301D7EBC35002223FD /* BonusRoundTests.swift */; };
 		E448F63C1D7EBC35002223FD /* BonusRoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448F63B1D7EBC35002223FD /* BonusRoundUITests.swift */; };
 		E49B35E81D83376A00477068 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E49B35E71D83376A00477068 /* Default-568h@2x.png */; };
+		E4F09F931D85F04B00CDDBEE /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F09F921D85F04B00CDDBEE /* BottomBorderTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E448F63B1D7EBC35002223FD /* BonusRoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BonusRoundUITests.swift; path = BonusRoundUITests/BonusRoundUITests.swift; sourceTree = "<group>"; };
 		E448F63D1D7EBC35002223FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = BonusRoundUITests/Info.plist; sourceTree = "<group>"; };
 		E49B35E71D83376A00477068 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E4F09F921D85F04B00CDDBEE /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		E448F61A1D7EBC35002223FD /* BonusRound */ = {
 			isa = PBXGroup;
 			children = (
+				E4F09F911D85EFF800CDDBEE /* Code */,
 				E448F61B1D7EBC35002223FD /* AppDelegate.swift */,
 				E448F61D1D7EBC35002223FD /* ViewController.swift */,
 				E448F61F1D7EBC35002223FD /* Main.storyboard */,
@@ -128,6 +131,14 @@
 			);
 			name = BonusRoundUITests;
 			path = Unit03Lesson02_06_BonusRoundUITests;
+			sourceTree = "<group>";
+		};
+		E4F09F911D85EFF800CDDBEE /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				E4F09F921D85F04B00CDDBEE /* BottomBorderTextField.swift */,
+			);
+			name = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				TargetAttributes = {
 					E448F6171D7EBC35002223FD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2XR7EU8WL3;
 					};
 					E448F62B1D7EBC35002223FD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -262,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F09F931D85F04B00CDDBEE /* BottomBorderTextField.swift in Sources */,
 				E448F61E1D7EBC35002223FD /* ViewController.swift in Sources */,
 				E448F61C1D7EBC35002223FD /* AppDelegate.swift in Sources */,
 			);
@@ -405,10 +418,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/BonusRound/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.BonusRound";
 				PRODUCT_NAME = BonusRound;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -416,10 +432,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/BonusRound/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.BonusRound";
 				PRODUCT_NAME = BonusRound;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
