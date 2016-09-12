@@ -8,7 +8,7 @@
         <!--New Streak-->
         <scene sceneID="KmU-V2-mLo">
             <objects>
-                <viewController id="oR6-hn-20X" sceneMemberID="viewController">
+                <viewController id="oR6-hn-20X" customClass="NewStreakViewController" customModule="BonusRound" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vQL-y7-xUc"/>
                         <viewControllerLayoutGuide type="bottom" id="Q0g-b3-JWc"/>
@@ -22,14 +22,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-4f-Ec8" customClass="BottomBorderLabel" customModule="BonusRound" customModuleProvider="target">
+                                <rect key="frame" x="20" y="110" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-Qs-Tdd">
+                                <rect key="frame" x="0.0" y="139" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4H5-hm-iBy" id="CFc-ID-g6t"/>
+                                    <outlet property="delegate" destination="4H5-hm-iBy" id="Hwo-3W-kC4"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Streak" id="pln-MW-kiJ">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="axv-to-heP"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="3Xy-sj-uht">
+                            <connections>
+                                <action selector="onCancelClick:" destination="oR6-hn-20X" id="jVW-Dg-DZ4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="axv-to-heP">
+                            <connections>
+                                <action selector="onDoneClick:" destination="oR6-hn-20X" id="vKp-Oh-38f"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="streakTypePicker" destination="eHl-Qs-Tdd" id="vLY-qM-w12"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70V-gA-9fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

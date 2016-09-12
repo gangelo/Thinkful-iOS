@@ -1,5 +1,5 @@
 //
-//  BottomBorderTextField.swift
+//  BottomBorderLabel.swift
 //  BonusRound
 //
 //  Created by Gene M. Angelo  Jr. on 9/11/16.
@@ -9,14 +9,13 @@
 import UIKit
 import Foundation
 
-public class BottomBorderTextField : UITextField, PlaceholderControl {
+public class BottomBorderLabel : UILabel, PlaceholderControl {
     private var _borderColor:UIColor = UIColor.blackColor()
-    private var _lineWidth:CGFloat = BottomBorderTextField.defaultLineWidth
+    private var _lineWidth:CGFloat = BottomBorderLabel.defaultLineWidth
     
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
-        self.borderStyle = UITextBorderStyle.None
         self.borderColor = UIColor.seventyPercentGreyColor()
     }
     
