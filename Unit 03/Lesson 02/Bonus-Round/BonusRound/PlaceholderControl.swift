@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 public protocol PlaceholderControl {
+    // MARK: Properties
     var borderColor:UIColor { get set }
     var lineWidth:CGFloat { get set }
 }
