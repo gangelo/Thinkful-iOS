@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70V-gA-9fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="576"/>
+            <point key="canvasLocation" x="2055" y="581"/>
         </scene>
         <!--Streak-->
         <scene sceneID="tne-QT-ifu">
@@ -72,17 +72,12 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r5v-Qh-o7S">
-                                <rect key="frame" x="20" y="72" width="280" height="483"/>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Streak" id="frg-Bj-feK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GiS-uf-wye">
                             <connections>
-                                <segue destination="aWm-7k-d6D" kind="show" identifier="addStreak" id="8nR-sm-D2u"/>
+                                <segue destination="Hef-I8-JM3" kind="show" identifier="addStreak" id="XLV-aY-X5q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -114,24 +109,24 @@
             <point key="canvasLocation" x="719" y="576"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="R0q-zR-elW">
+        <scene sceneID="dwT-e5-esx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWm-7k-d6D" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hef-I8-JM3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rUb-jS-rID">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZD2-aL-SYC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="oR6-hn-20X" kind="relationship" relationship="rootViewController" id="e3F-IL-sHo"/>
+                        <segue destination="oR6-hn-20X" kind="relationship" relationship="rootViewController" id="arV-XA-zr2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s6t-ks-W16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHk-uj-vxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597" y="576"/>
+            <point key="canvasLocation" x="1612" y="576"/>
         </scene>
     </scenes>
 </document>

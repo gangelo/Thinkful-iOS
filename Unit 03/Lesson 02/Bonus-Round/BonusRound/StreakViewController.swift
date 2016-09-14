@@ -80,9 +80,14 @@ class StreakViewController: UIViewController {
     }
     
     func showMessage(message: String) {
-        let alert = UIAlertController(title: "Hey", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Working!!", style: UIAlertActionStyle.Default, handler: nil))
+        let alert = UIAlertController(title: "Attention", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func updateCountLabel() {
+        let count = countStepper.value
+        self.countLabel.text = "Value: \(count)"
     }
     
     @IBAction func onDoneClick(sender: UIBarButtonItem) {
@@ -96,6 +101,9 @@ class StreakViewController: UIViewController {
         streak!.name = nameTextField.text!
         streak!.count = UInt64(countStepper.value)
         
+        let service = StreakService()
+        service.addOrUpdate(streak!)
+        
         self.dismissViewControllerAnimated(true, completion:nil)
     }
     
@@ -104,6 +112,7 @@ class StreakViewController: UIViewController {
     }
     
     @IBAction func onTouchUpInside(sender: UIStepper) {
+        self.updateCountLabel()
     }
     
 }

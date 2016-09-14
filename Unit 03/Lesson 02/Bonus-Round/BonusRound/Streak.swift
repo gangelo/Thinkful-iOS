@@ -9,12 +9,12 @@
 import Foundation
 
 public class Streak {
-    var name:String = ""
-    var count:UInt64 = 0
+    private var _name:String = ""
+    private var _count:UInt64 = 0
     
     init(name: String, count: UInt64) {
-        self.name = name
-        self.count = 0
+        self._name = name
+        self._count = 0
     }
 
     convenience init() {
@@ -23,6 +23,16 @@ public class Streak {
     
     convenience init(name: String) {
         self.init(name: name, count: 0)
+    }
+    
+    var name: String {
+        get { return _name }
+        set { _name = newValue }
+    }
+    
+    var count: UInt64 {
+        get { return _count }
+        set { _count = newValue }
     }
     
     

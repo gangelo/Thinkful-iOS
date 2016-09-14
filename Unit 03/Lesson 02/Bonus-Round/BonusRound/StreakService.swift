@@ -14,7 +14,6 @@ public class StreakService {
             "Snak" : Streak(name: "Snak", count: 0)]
     
     init() {
-        self.addOrUpdate(Streak(name: "Vitamins", count: 0))
     }
     
     public func addOrUpdate(streak: Streak) {
@@ -28,13 +27,30 @@ public class StreakService {
     
     public func delete(streak: Streak) {
         self.dynamicType.repository.removeValueForKey(streak.name)
+        self.description()
     }
     
     public func exists(streak: Streak) -> Bool {
         return self.dynamicType.repository[streak.name] != nil
     }
     
+    public func all() -> Array<Streak>?  {
+        var all = Array<Streak>()
+        
+        for (_, streak) in self.dynamicType.repository {
+            all.append(streak)
+        }
+        
+        return all
+    }
+    
     public func description() {
-        print(self.dynamicType.repository)
+        print("\nDisplaying streaks...")
+        
+        for (_, streak) in self.dynamicType.repository {
+            print("Steak name: \(streak.name), count: \(streak.count)")
+        }
+        
+        print("Streak count: \(self.dynamicType.repository.count)")
     }
 }
