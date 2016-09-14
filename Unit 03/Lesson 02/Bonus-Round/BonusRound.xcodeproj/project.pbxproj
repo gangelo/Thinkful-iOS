@@ -14,12 +14,17 @@
 		E448F6261D7EBC35002223FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E448F6241D7EBC35002223FD /* LaunchScreen.storyboard */; };
 		E448F6311D7EBC35002223FD /* BonusRoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448F6301D7EBC35002223FD /* BonusRoundTests.swift */; };
 		E448F63C1D7EBC35002223FD /* BonusRoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448F63B1D7EBC35002223FD /* BonusRoundUITests.swift */; };
-		E45667041D86419D002D2AE4 /* NewStreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45667031D86419D002D2AE4 /* NewStreakViewController.swift */; };
+		E45667041D86419D002D2AE4 /* StreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45667031D86419D002D2AE4 /* StreakViewController.swift */; };
 		E45667061D864680002D2AE4 /* BottomBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45667051D864680002D2AE4 /* BottomBorderLabel.swift */; };
 		E45667081D86694C002D2AE4 /* PlaceholderControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45667071D86694C002D2AE4 /* PlaceholderControl.swift */; };
 		E456670A1D86EDBB002D2AE4 /* NSAttributedString+getAttributedStringValue<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45667091D86EDBB002D2AE4 /* NSAttributedString+getAttributedStringValue<T>.swift */; };
 		E456670C1D871696002D2AE4 /* UIColor+seventyPercentGreyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E456670B1D871696002D2AE4 /* UIColor+seventyPercentGreyColor.swift */; };
+		E45667101D880390002D2AE4 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = E456670F1D880390002D2AE4 /* Streak.swift */; };
+		E45667121D8803C9002D2AE4 /* StreakService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45667111D8803C9002D2AE4 /* StreakService.swift */; };
+		E45667151D880824002D2AE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45667141D880824002D2AE4 /* Constants.swift */; };
 		E49B35E81D83376A00477068 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E49B35E71D83376A00477068 /* Default-568h@2x.png */; };
+		E49DF8D41D88955700B59AE4 /* String+trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49DF8D31D88955700B59AE4 /* String+trim.swift */; };
+		E49DF8D61D8896A900B59AE4 /* String+append.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49DF8D51D8896A900B59AE4 /* String+append.swift */; };
 		E4F09F931D85F04B00CDDBEE /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F09F921D85F04B00CDDBEE /* BottomBorderTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,12 +59,17 @@
 		E448F6371D7EBC35002223FD /* BonusRound.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonusRound.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E448F63B1D7EBC35002223FD /* BonusRoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BonusRoundUITests.swift; path = BonusRoundUITests/BonusRoundUITests.swift; sourceTree = "<group>"; };
 		E448F63D1D7EBC35002223FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = BonusRoundUITests/Info.plist; sourceTree = "<group>"; };
-		E45667031D86419D002D2AE4 /* NewStreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStreakViewController.swift; sourceTree = "<group>"; };
+		E45667031D86419D002D2AE4 /* StreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreakViewController.swift; sourceTree = "<group>"; };
 		E45667051D864680002D2AE4 /* BottomBorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderLabel.swift; sourceTree = "<group>"; };
 		E45667071D86694C002D2AE4 /* PlaceholderControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderControl.swift; sourceTree = "<group>"; };
 		E45667091D86EDBB002D2AE4 /* NSAttributedString+getAttributedStringValue<T>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+getAttributedStringValue<T>.swift"; sourceTree = "<group>"; };
 		E456670B1D871696002D2AE4 /* UIColor+seventyPercentGreyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+seventyPercentGreyColor.swift"; sourceTree = "<group>"; };
+		E456670F1D880390002D2AE4 /* Streak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
+		E45667111D8803C9002D2AE4 /* StreakService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreakService.swift; sourceTree = "<group>"; };
+		E45667141D880824002D2AE4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E49B35E71D83376A00477068 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E49DF8D31D88955700B59AE4 /* String+trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+trim.swift"; sourceTree = "<group>"; };
+		E49DF8D51D8896A900B59AE4 /* String+append.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+append.swift"; sourceTree = "<group>"; };
 		E4F09F921D85F04B00CDDBEE /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,17 +122,20 @@
 		E448F61A1D7EBC35002223FD /* BonusRound */ = {
 			isa = PBXGroup;
 			children = (
+				E45667131D8807D5002D2AE4 /* Shared */,
+				E456670E1D88035C002D2AE4 /* Models */,
+				E456670D1D88017D002D2AE4 /* Services */,
 				E4F09F911D85EFF800CDDBEE /* Code */,
 				E448F61B1D7EBC35002223FD /* AppDelegate.swift */,
-				E448F61D1D7EBC35002223FD /* ViewController.swift */,
-				E448F61F1D7EBC35002223FD /* Main.storyboard */,
+				E45667171D88117A002D2AE4 /* ViewControllers */,
+				E45667181D881190002D2AE4 /* Storyboards */,
 				E448F6221D7EBC35002223FD /* Assets.xcassets */,
-				E448F6241D7EBC35002223FD /* LaunchScreen.storyboard */,
 				E448F6271D7EBC35002223FD /* Info.plist */,
-				E45667031D86419D002D2AE4 /* NewStreakViewController.swift */,
 			);
+			indentWidth = 4;
 			path = BonusRound;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		E448F62F1D7EBC35002223FD /* BonusRoundTests */ = {
 			isa = PBXGroup;
@@ -144,14 +157,66 @@
 			path = Unit03Lesson02_06_BonusRoundUITests;
 			sourceTree = "<group>";
 		};
+		E456670D1D88017D002D2AE4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E45667111D8803C9002D2AE4 /* StreakService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		E456670E1D88035C002D2AE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E456670F1D880390002D2AE4 /* Streak.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E45667131D8807D5002D2AE4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E45667141D880824002D2AE4 /* Constants.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		E45667161D88115C002D2AE4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E45667091D86EDBB002D2AE4 /* NSAttributedString+getAttributedStringValue<T>.swift */,
+				E456670B1D871696002D2AE4 /* UIColor+seventyPercentGreyColor.swift */,
+				E49DF8D31D88955700B59AE4 /* String+trim.swift */,
+				E49DF8D51D8896A900B59AE4 /* String+append.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E45667171D88117A002D2AE4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E448F61D1D7EBC35002223FD /* ViewController.swift */,
+				E45667031D86419D002D2AE4 /* StreakViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E45667181D881190002D2AE4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E448F61F1D7EBC35002223FD /* Main.storyboard */,
+				E448F6241D7EBC35002223FD /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		E4F09F911D85EFF800CDDBEE /* Code */ = {
 			isa = PBXGroup;
 			children = (
 				E4F09F921D85F04B00CDDBEE /* BottomBorderTextField.swift */,
 				E45667051D864680002D2AE4 /* BottomBorderLabel.swift */,
 				E45667071D86694C002D2AE4 /* PlaceholderControl.swift */,
-				E45667091D86EDBB002D2AE4 /* NSAttributedString+getAttributedStringValue<T>.swift */,
-				E456670B1D871696002D2AE4 /* UIColor+seventyPercentGreyColor.swift */,
+				E45667161D88115C002D2AE4 /* Extensions */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -290,13 +355,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E456670A1D86EDBB002D2AE4 /* NSAttributedString+getAttributedStringValue<T>.swift in Sources */,
+				E45667151D880824002D2AE4 /* Constants.swift in Sources */,
+				E49DF8D61D8896A900B59AE4 /* String+append.swift in Sources */,
+				E49DF8D41D88955700B59AE4 /* String+trim.swift in Sources */,
 				E4F09F931D85F04B00CDDBEE /* BottomBorderTextField.swift in Sources */,
 				E456670C1D871696002D2AE4 /* UIColor+seventyPercentGreyColor.swift in Sources */,
 				E448F61E1D7EBC35002223FD /* ViewController.swift in Sources */,
 				E448F61C1D7EBC35002223FD /* AppDelegate.swift in Sources */,
-				E45667041D86419D002D2AE4 /* NewStreakViewController.swift in Sources */,
+				E45667041D86419D002D2AE4 /* StreakViewController.swift in Sources */,
 				E45667081D86694C002D2AE4 /* PlaceholderControl.swift in Sources */,
+				E45667101D880390002D2AE4 /* Streak.swift in Sources */,
 				E45667061D864680002D2AE4 /* BottomBorderLabel.swift in Sources */,
+				E45667121D8803C9002D2AE4 /* StreakService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

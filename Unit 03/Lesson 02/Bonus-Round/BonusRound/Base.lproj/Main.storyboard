@@ -8,7 +8,7 @@
         <!--New Streak-->
         <scene sceneID="KmU-V2-mLo">
             <objects>
-                <viewController id="oR6-hn-20X" customClass="NewStreakViewController" customModule="BonusRound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oR6-hn-20X" customClass="StreakViewController" customModule="BonusRound" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vQL-y7-xUc"/>
                         <viewControllerLayoutGuide type="bottom" id="Q0g-b3-JWc"/>
@@ -17,24 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmw-R8-yBa">
+                                <rect key="frame" x="20" y="110" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="74K-Uo-Vtz">
+                                <rect key="frame" x="206" y="106" width="94" height="29"/>
+                                <connections>
+                                    <action selector="onTouchUpInside:" destination="oR6-hn-20X" eventType="touchUpInside" id="0Lj-MY-AFt"/>
+                                </connections>
+                            </stepper>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abP-jJ-9Xj" customClass="BottomBorderTextField" customModule="BonusRound" customModuleProvider="target">
                                 <rect key="frame" x="20" y="72" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-4f-Ec8" customClass="BottomBorderLabel" customModule="BonusRound" customModuleProvider="target">
-                                <rect key="frame" x="20" y="110" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-Qs-Tdd">
-                                <rect key="frame" x="0.0" y="139" width="320" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="4H5-hm-iBy" id="CFc-ID-g6t"/>
-                                    <outlet property="delegate" destination="4H5-hm-iBy" id="Hwo-3W-kC4"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -53,7 +52,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="streakTypePicker" destination="eHl-Qs-Tdd" id="vLY-qM-w12"/>
+                        <outlet property="countLabel" destination="Nmw-R8-yBa" id="CSx-B4-fnd"/>
+                        <outlet property="countStepper" destination="74K-Uo-Vtz" id="uca-Gf-WEr"/>
+                        <outlet property="nameTextField" destination="abP-jJ-9Xj" id="fYf-gD-9kh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70V-gA-9fd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,12 +72,17 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r5v-Qh-o7S">
+                                <rect key="frame" x="20" y="72" width="280" height="483"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Streak" id="frg-Bj-feK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GiS-uf-wye">
                             <connections>
-                                <segue destination="aWm-7k-d6D" kind="show" id="8nR-sm-D2u"/>
+                                <segue destination="aWm-7k-d6D" kind="show" identifier="addStreak" id="8nR-sm-D2u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -112,13 +118,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWm-7k-d6D" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rUb-jS-rID">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="oR6-hn-20X" kind="relationship" relationship="rootViewController" id="xTH-9v-P5F"/>
+                        <segue destination="oR6-hn-20X" kind="relationship" relationship="rootViewController" id="e3F-IL-sHo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6t-ks-W16" userLabel="First Responder" sceneMemberID="firstResponder"/>
