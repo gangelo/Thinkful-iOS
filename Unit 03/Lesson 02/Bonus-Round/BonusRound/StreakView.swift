@@ -8,38 +8,29 @@
 
 import UIKit
 
-class StreakView: UIView {
-    private var streak:Streak = Streak()
+public class StreakView: UIView {
+    private var _streak:Streak = Streak()
     
-    /*
-    required init?(coder aDecoder: NSCoder) {
+    // MARK: Properties
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var count: UILabel!
+    
+    init() {
+        super.init(frame: CGRectZero)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        addSubviews()
     }
     
-    convenience init?(coder aDecoder: NSCoder, streak: Streak) {
-        self.init(coder: aDecoder)
-        addSubviews()
-    }
-    */
-    
-    //required convenience init?(coder: NSCoder, streak: Streak) {
-    //    self.init(coder: coder)
-    //}
-    
-    init(frame: CGRect, streak: Streak) {
-        self.streak = streak
-        super.init(frame: frame)
-        addSubviews()
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func addSubviews() {
-        let nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
-        nameLabel.text = self.streak.name
-        self.addSubview(nameLabel)
+    public var streak : Streak {
+        get { return _streak }
+        set {
+            _streak = newValue
+            
+            self.name.text = _streak.name
+            self.count.text = String(_streak.count)
+        }
     }
 }

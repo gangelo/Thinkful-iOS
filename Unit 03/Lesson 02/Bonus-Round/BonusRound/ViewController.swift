@@ -25,30 +25,45 @@ class ViewController: UIViewController {
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[scrollView]|", options: .AlignAllCenterX, metrics: nil, views: ["scrollView": scrollView]))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[scrollView]|", options: .AlignAllCenterX, metrics: nil, views: ["scrollView": scrollView]))
         
-        
         stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .Vertical
+        stackView.distribution = .EqualSpacing
+        stackView.alignment = .Center
+        //stackView.spacing = 10
         scrollView.addSubview(stackView)
         
         scrollView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[stackView]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["stackView": stackView]))
         scrollView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[stackView]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["stackView": stackView]))
         
-        /*for _ in 1 ..< 100 {
-            let vw = UIButton(type: UIButtonType.System)
-            vw.setTitle("Button", forState: .Normal)
-            stackView.addArrangedSubview(vw)
-        }*/
         
         let service = StreakService()
-        
-        var x = 0
-        let controlHeight =  42
         for streak in service.all()! {
-            stackView.addArrangedSubview(StreakView(frame: CGRect(x: 0, y: 0, width: 200, height: controlHeight), streak: streak))
-            x = x + controlHeight
+            if let streakView = NSBundle.mainBundle().loadNibNamed("StreakView", owner: stackView, options: nil).first as? StreakView {
+                streakView.streak = streak
+                
+                stackView.addArrangedSubview(streakView)
+                
+                streakView.widthAnchor.constraintEqualToConstant(320).active = true
+                streakView.heightAnchor.constraintEqualToConstant(75).active = true
+                
+                //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[view]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":streakView]))
+                //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[view]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":streakView]))
+            }
         }
-
+        
+        /*
+        let service = StreakService()
+        for _ in service.all()! {
+            // let streakView = StreakView.instantiateFromNib(frame: CGRectZero, streak: streak, superView: stackView)
+             let streakView = StreakView.instanceFromNib()
+            
+            stackView.addArrangedSubview(streakView)
+            //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[streakView]|", options: NSLayoutFormatOptions.AlignAllLeft, metrics: nil, views: ["streakView": streakView]))
+            //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[streakView]|", options: NSLayoutFormatOptions.AlignAllLeft, metrics: nil, views: ["streakView": streakView]))
+            // view.addConstraint(NSLayoutConstraint(item: redView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1.0, constant: -30))
+            //stackView.addConstraint(NSLayoutConstraint(item: streakView, attribute: .Width, relatedBy: .Equal, toItem: stackView, attribute: .Width, multiplier: 1.0, constant: -30))
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
