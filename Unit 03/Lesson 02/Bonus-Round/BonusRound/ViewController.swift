@@ -30,7 +30,6 @@ class ViewController: UIViewController, StreakListUpdateDelegate {
         stackView.axis = .Vertical
         stackView.distribution = .EqualSpacing
         stackView.alignment = .Center
-        //stackView.spacing = 10
         scrollView.addSubview(stackView)
         
         scrollView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[stackView]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["stackView": stackView]))
