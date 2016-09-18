@@ -103,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E436D8A21D8E0ECC00D88572 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				E496BEF81D8B6CD600E263C2 /* StreakView.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
 		E448F60F1D7EBC35002223FD = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +135,12 @@
 		E448F61A1D7EBC35002223FD /* BonusRound */ = {
 			isa = PBXGroup;
 			children = (
-				E496BEF81D8B6CD600E263C2 /* StreakView.xib */,
+				E436D8A21D8E0ECC00D88572 /* Nibs */,
 				E496BEF71D8B6CAC00E263C2 /* Playground.playground */,
 				E45667131D8807D5002D2AE4 /* Shared */,
 				E456670E1D88035C002D2AE4 /* Models */,
 				E456670D1D88017D002D2AE4 /* Services */,
-				E4F09F911D85EFF800CDDBEE /* Code */,
+				E4F09F911D85EFF800CDDBEE /* Controls/Views */,
 				E448F61B1D7EBC35002223FD /* AppDelegate.swift */,
 				E45667171D88117A002D2AE4 /* ViewControllers */,
 				E45667181D881190002D2AE4 /* Storyboards */,
@@ -217,7 +225,7 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		E4F09F911D85EFF800CDDBEE /* Code */ = {
+		E4F09F911D85EFF800CDDBEE /* Controls/Views */ = {
 			isa = PBXGroup;
 			children = (
 				E4F09F921D85F04B00CDDBEE /* BottomBorderTextField.swift */,
@@ -226,7 +234,7 @@
 				E45667161D88115C002D2AE4 /* Extensions */,
 				E49DF8D91D88F4FE00B59AE4 /* StreakView.swift */,
 			);
-			name = Code;
+			name = Controls/Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

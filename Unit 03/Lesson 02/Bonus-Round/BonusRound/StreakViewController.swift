@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol StreakListUpdateDelegate {
+    func addStreak(sender:StreakViewController, withStreak streak: Streak)
+}
+
 class StreakViewController: UIViewController {
     
     // MARK: Properties
     var _streak:Streak? = nil
     var _isEditMode:Bool = false
+    var delegate: StreakListUpdateDelegate! = nil
     
     @IBOutlet weak var nameTextField: BottomBorderTextField!
     @IBOutlet weak var countStepper: UIStepper!
@@ -103,6 +108,8 @@ class StreakViewController: UIViewController {
         
         let service = StreakService()
         service.addOrUpdate(streak!)
+        
+        delegate!.addStreak(self, withStreak: streak!)
         
         self.dismissViewControllerAnimated(true, completion:nil)
     }

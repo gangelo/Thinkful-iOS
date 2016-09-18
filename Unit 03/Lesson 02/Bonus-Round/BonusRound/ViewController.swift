@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StreakListUpdateDelegate {
 
     // MARK: Properties
-    var scrollView: UIScrollView!
-    var stackView: UIStackView!
+    private var scrollView: UIScrollView!
+    private var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,33 +39,25 @@ class ViewController: UIViewController {
         
         let service = StreakService()
         for streak in service.all()! {
-            if let streakView = NSBundle.mainBundle().loadNibNamed("StreakView", owner: stackView, options: nil).first as? StreakView {
-                streakView.streak = streak
-                
-                stackView.addArrangedSubview(streakView)
-                
-                streakView.widthAnchor.constraintEqualToConstant(320).active = true
-                streakView.heightAnchor.constraintEqualToConstant(75).active = true
-                
-                //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[view]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":streakView]))
-                //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[view]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":streakView]))
-            }
+            addStreakToStackView(streak)
         }
-        
-        /*
-        let service = StreakService()
-        for _ in service.all()! {
-            // let streakView = StreakView.instantiateFromNib(frame: CGRectZero, streak: streak, superView: stackView)
-             let streakView = StreakView.instanceFromNib()
+    }
+    
+    internal func addStreak(sender:StreakViewController, withStreak streak: Streak) {
+        addStreakToStackView(streak)
+    }
+    
+    private func addStreakToStackView(streak: Streak) {
+        if let streakView = NSBundle.mainBundle().loadNibNamed("StreakView", owner: stackView, options: nil).first as? StreakView {
+            streakView.streak = streak
             
             stackView.addArrangedSubview(streakView)
-            //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[streakView]|", options: NSLayoutFormatOptions.AlignAllLeft, metrics: nil, views: ["streakView": streakView]))
-            //stackView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[streakView]|", options: NSLayoutFormatOptions.AlignAllLeft, metrics: nil, views: ["streakView": streakView]))
-            // view.addConstraint(NSLayoutConstraint(item: redView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1.0, constant: -30))
-            //stackView.addConstraint(NSLayoutConstraint(item: streakView, attribute: .Width, relatedBy: .Equal, toItem: stackView, attribute: .Width, multiplier: 1.0, constant: -30))
-        }*/
+            
+            streakView.widthAnchor.constraintEqualToConstant(320).active = true
+            streakView.heightAnchor.constraintEqualToConstant(75).active = true
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,6 +67,9 @@ class ViewController: UIViewController {
         if let identifier = segue.identifier {
             let navigationController = segue.destinationViewController as! UINavigationController
             if let streakViewController = navigationController.topViewController as? StreakViewController {
+                
+                streakViewController.delegate = self
+                
                 switch(identifier) {
                 case Constants.Segues.addStreak:
                     streakViewController.streak = Streak()
@@ -88,7 +83,5 @@ class ViewController: UIViewController {
             }
         }
     }
-
-
 }
 
