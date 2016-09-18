@@ -111,6 +111,14 @@
 			name = Nibs;
 			sourceTree = "<group>";
 		};
+		E436D8A31D8E213500D88572 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				E496BEF71D8B6CAC00E263C2 /* Playground.playground */,
+			);
+			name = Playgrounds;
+			sourceTree = "<group>";
+		};
 		E448F60F1D7EBC35002223FD = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E436D8A21D8E0ECC00D88572 /* Nibs */,
-				E496BEF71D8B6CAC00E263C2 /* Playground.playground */,
+				E436D8A31D8E213500D88572 /* Playgrounds */,
 				E45667131D8807D5002D2AE4 /* Shared */,
 				E456670E1D88035C002D2AE4 /* Models */,
 				E456670D1D88017D002D2AE4 /* Services */,
