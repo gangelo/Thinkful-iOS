@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9BAEED566BF194184622390EDC67ED1D791138E1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7FDB7916BF7A3DBF95F531D7423BAACB45D2B64D" : 0,
+    "9BAEED566BF194184622390EDC67ED1D791138E1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D37B4CC3-6BA5-432E-B2A2-20C1C796DEC7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7FDB7916BF7A3DBF95F531D7423BAACB45D2B64D" : "..\/..",
+    "9BAEED566BF194184622390EDC67ED1D791138E1" : "DebuggingProject"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DebuggingProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DebuggingProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:gangelo\/Thinkful-iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FDB7916BF7A3DBF95F531D7423BAACB45D2B64D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:pkprosol\/SwiftDebuggingProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BAEED566BF194184622390EDC67ED1D791138E1"
+    }
+  ]
+}
