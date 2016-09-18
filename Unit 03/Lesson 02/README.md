@@ -19,4 +19,4 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
    
    [rgb_sliders_better]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2002/RGB-Sliders-With-Navigation>
    [rgb_sliders]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2002/RGB-Sliders>
-   [bonus_round]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2002/Bonus-Round/BonusRound>
+   [bonus_round]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2002/Bonus-Round>
