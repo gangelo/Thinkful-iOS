@@ -14,4 +14,4 @@ This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [
    [thinkful]: <http://thinkful.com>
    [thinkful_ios_repro]:<https://github.com/gangelo/Thinkful-iOS>
    
-   [bonus_round]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2002/Bonus-Round/BonusRound>
+   [bonus_round]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2002/Bonus-Round>
