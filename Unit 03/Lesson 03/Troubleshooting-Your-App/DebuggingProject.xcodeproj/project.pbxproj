@@ -163,9 +163,11 @@
 				TargetAttributes = {
 					F4011C2F1A1F180800BFE0EC = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0800;
 					};
 					F4011C441A1F180800BFE0EC = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F4011C2F1A1F180800BFE0EC;
 					};
 				};
@@ -341,6 +343,7 @@
 				INFOPLIST_FILE = DebuggingProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -351,6 +354,7 @@
 				INFOPLIST_FILE = DebuggingProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -369,6 +373,7 @@
 				INFOPLIST_FILE = DebuggingProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DebuggingProject.app/DebuggingProject";
 			};
 			name = Debug;
@@ -384,6 +389,7 @@
 				INFOPLIST_FILE = DebuggingProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DebuggingProject.app/DebuggingProject";
 			};
 			name = Release;
