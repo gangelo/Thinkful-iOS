@@ -32,17 +32,18 @@ class ContactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return ContactHelper.instance.getContacts().count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
 
-        // Configure the cell...
-        cell.textLabel?.text = "A fine example of a UITableViewCell."
-        
         print(indexPath[1])
-
+        
+        let contact = ContactHelper.instance.getContacts()[indexPath[1]]
+        
+        cell.textLabel?.text = "\(contact.name) \(contact.phoneNumber.getFormattedPhoneNumber())"
+        
         return cell
     }
 
