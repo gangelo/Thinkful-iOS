@@ -14,6 +14,7 @@
 		E48F61241D8F6871005B9F1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48F61221D8F6871005B9F1C /* LaunchScreen.storyboard */; };
 		E48F612F1D8F6871005B9F1C /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F612E1D8F6871005B9F1C /* ContactsTests.swift */; };
 		E48F613A1D8F6871005B9F1C /* ContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61391D8F6871005B9F1C /* ContactsUITests.swift */; };
+		E48F61481D8F6CC1005B9F1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48F61471D8F6CC1005B9F1C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E48F61351D8F6871005B9F1C /* ContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48F61391D8F6871005B9F1C /* ContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUITests.swift; sourceTree = "<group>"; };
 		E48F613B1D8F6871005B9F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E48F61471D8F6CC1005B9F1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E48F61201D8F6871005B9F1C /* Assets.xcassets */,
 				E48F61221D8F6871005B9F1C /* LaunchScreen.storyboard */,
 				E48F61251D8F6871005B9F1C /* Info.plist */,
+				E48F61471D8F6CC1005B9F1C /* Images.xcassets */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E48F61241D8F6871005B9F1C /* LaunchScreen.storyboard in Resources */,
+				E48F61481D8F6CC1005B9F1C /* Images.xcassets in Resources */,
 				E48F61211D8F6871005B9F1C /* Assets.xcassets in Resources */,
 				E48F611F1D8F6871005B9F1C /* Main.storyboard in Resources */,
 			);
