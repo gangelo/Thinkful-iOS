@@ -15,22 +15,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="defaultCell" textLabel="8iv-pN-aEK" style="IBUITableViewCellStyleDefault" id="mfG-jL-2Bc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="defaultCell" id="mfG-jL-2Bc" customClass="ContactTableViewCell" customModule="Contacts" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mfG-jL-2Bc" id="SDX-We-XdE">
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8iv-pN-aEK">
-                                            <frame key="frameInset" minX="15" width="345" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-593-person" translatesAutoresizingMaskIntoConstraints="NO" id="iSH-R1-VWi">
+                                            <frame key="frameInset" minX="8" minY="9" width="21" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6z-te-aqN">
+                                            <frame key="frameInset" minX="37" minY="11" width="330" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contactInfo" destination="R6z-te-aqN" id="gAg-ZU-j8p"/>
+                                    <segue destination="hJn-9u-bhx" kind="showDetail" identifier="viewContactDetail" id="GKO-0U-N7b"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -38,15 +46,12 @@
                             <outlet property="delegate" destination="5nI-Iz-fMX" id="GMi-4j-eaG"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="hJn-9u-bhx" kind="showDetail" identifier="viewContactDetail" id="rxp-ro-meE"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dia-E1-inl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="127"/>
+            <point key="canvasLocation" x="124" y="126.38680659670166"/>
         </scene>
-        <!--Contact Details-->
+        <!--Title-->
         <scene sceneID="lyQ-Xx-sgW">
             <objects>
                 <viewController id="zJi-5S-Q1X" customClass="ContactDetailsViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,9 +84,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contact Details" id="jUm-hS-ROz">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Hvh-HI-UVY"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="Hel-FD-5fN"/>
                     <connections>
                         <outlet property="contactName" destination="Cgb-MB-Kxz" id="Dc2-eL-Wgc"/>
                         <outlet property="contactPhone" destination="9CE-nC-ejO" id="fak-pu-clJ"/>
@@ -107,7 +110,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CML-Pb-7rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845.60000000000002" y="125.4872563718141"/>
+            <point key="canvasLocation" x="863" y="41"/>
         </scene>
     </scenes>
     <resources>

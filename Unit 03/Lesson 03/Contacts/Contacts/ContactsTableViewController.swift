@@ -36,13 +36,11 @@ class ContactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! ContactTableViewCell
 
         print(indexPath.row)
         
-        let contact = ContactHelper.instance.getContacts()[indexPath.row]
-        
-        cell.textLabel?.text = "\(contact.name) \(contact.phoneNumber.getFormattedPhoneNumber())"
+        cell.contact = ContactHelper.instance.getContacts()[indexPath.row]
         
         return cell
     }
@@ -92,8 +90,8 @@ class ContactsTableViewController: UITableViewController {
             let navigationController = segue.destination as! UINavigationController
             
             if let contactDetailsViewController = navigationController.topViewController as? ContactDetailsViewController {
-                if let cell = sender as? UITableViewCell {
-                    contactDetailsViewController.contact
+                if let cell = sender as? ContactTableViewCell {
+                    contactDetailsViewController.contact =  cell.contact
                 }
             }
         }
