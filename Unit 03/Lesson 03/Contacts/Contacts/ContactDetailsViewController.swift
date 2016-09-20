@@ -50,5 +50,7 @@ class ContactDetailsViewController: UIViewController {
         get { return _contact }
         set { _contact = newValue }
     }
-
+    
+    @IBAction func unwindToContactsTableViewController(segue : UIStoryboardSegue) {
+    }
 }

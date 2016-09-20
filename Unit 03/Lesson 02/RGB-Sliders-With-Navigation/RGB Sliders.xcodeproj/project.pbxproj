@@ -211,13 +211,16 @@
 					E4A03CFB1D7BB37200E8E7C8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 2XR7EU8WL3;
+						LastSwiftMigration = 0800;
 					};
 					E4A03D0F1D7BB37200E8E7C8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = E4A03CFB1D7BB37200E8E7C8;
 					};
 					E4A03D1A1D7BB37200E8E7C8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = E4A03CFB1D7BB37200E8E7C8;
 					};
 				};
@@ -427,6 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.RGB-Sliders";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -441,6 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.RGB-Sliders";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -452,6 +457,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.RGB-SlidersTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RGB Sliders.app/RGB Sliders";
 			};
 			name = Debug;
@@ -464,6 +470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.RGB-SlidersTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RGB Sliders.app/RGB Sliders";
 			};
 			name = Release;
@@ -475,6 +482,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.RGB-SlidersUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "RGB Sliders";
 			};
 			name = Debug;
@@ -486,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohojo-werks.RGB-SlidersUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "RGB Sliders";
 			};
 			name = Release;

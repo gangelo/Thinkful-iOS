@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let color = defaults.uiColorForKey("openColor", defaultColor: UIColor.whiteColor())
+        let defaults = UserDefaults.standard
+        let color = defaults.uiColorForKey("openColor", defaultColor: UIColor.white)
         let rgb = color.toRGB()
         
         redSlider.value = rgb.red * 255.0
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         setSliderColor()
         
-        colorSquare.layer.borderColor = UIColor.blackColor().CGColor
+        colorSquare.layer.borderColor = UIColor.black.cgColor
         colorSquare.layer.borderWidth = 1
     }
 
@@ -44,9 +44,9 @@ class ViewController: UIViewController {
         setSliderColor()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  let identifier = segue.identifier {
-            let destinationViewController = segue.destinationViewController
+            let destinationViewController = segue.destination
             
             switch(identifier) {
                 case "openColor":
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveSliderColor(_: AnyObject) {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         defaults.setUIColor(getSliderColor(), forKey: "openColor")
         defaults.synchronize()
     }

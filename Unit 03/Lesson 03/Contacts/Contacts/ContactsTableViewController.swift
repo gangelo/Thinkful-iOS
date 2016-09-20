@@ -44,6 +44,10 @@ class ContactsTableViewController: UITableViewController {
         
         return cell
     }
+    
+    @IBAction func unwindToContactsTableViewController(segue: UIStoryboardSegue) {
+        //nothing goes here
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,8 +91,17 @@ class ContactsTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if (segue.identifier == "viewContactDetail") {
-            let navigationController = segue.destination as! UINavigationController
             
+            if (false) {
+                if let contactDetailsViewController = segue.destination as? ContactDetailsViewController {
+                    if let cell = sender as? ContactTableViewCell {
+                        contactDetailsViewController.contact =  cell.contact
+                    }
+                }
+                return
+            }
+            
+            let navigationController = segue.destination as! UINavigationController
             if let contactDetailsViewController = navigationController.topViewController as? ContactDetailsViewController {
                 if let cell = sender as? ContactTableViewCell {
                     contactDetailsViewController.contact =  cell.contact
@@ -96,7 +109,6 @@ class ContactsTableViewController: UITableViewController {
             }
         }
     }
-
 }
 
 

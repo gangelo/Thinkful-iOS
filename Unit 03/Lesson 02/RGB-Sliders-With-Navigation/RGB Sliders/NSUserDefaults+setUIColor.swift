@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-extension NSUserDefaults {
-    func setUIColor(color: UIColor?, forKey: String) {
-        var colorData: NSData?
+extension UserDefaults {
+    func setUIColor(_ color: UIColor?, forKey: String) {
+        var colorData: Data?
         if let color = color {
-            colorData = NSKeyedArchiver.archivedDataWithRootObject(color)
+            colorData = NSKeyedArchiver.archivedData(withRootObject: color)
         }
-        setObject(colorData, forKey: forKey)
+        set(colorData, forKey: forKey)
     }
     
-    func uiColorForKey(forKey: String, defaultColor: UIColor) -> UIColor {
-        if let colorData = dataForKey(forKey) {
-            if let color = (NSKeyedUnarchiver.unarchiveObjectWithData(colorData) as? UIColor) {
+    func uiColorForKey(_ forKey: String, defaultColor: UIColor) -> UIColor {
+        if let colorData = data(forKey: forKey) {
+            if let color = (NSKeyedUnarchiver.unarchiveObject(with: colorData) as? UIColor) {
                 return color
             }
         }

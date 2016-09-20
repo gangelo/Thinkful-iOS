@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIColor {    
-    class func toRGB(color: UIColor?, defaultColor: UIColor) -> (red: Float, green: Float, blue: Float, alpha: Float) {
+    class func toRGB(_ color: UIColor?, defaultColor: UIColor) -> (red: Float, green: Float, blue: Float, alpha: Float) {
         if let color = color {
             return color.toRGB()
         }
