@@ -22,11 +22,11 @@ class ContactDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         if let contact = _contact {
-            self.contactName.text = contact.name
-            self.contactPhone.text = contact.phoneNumber.getFormattedPhoneNumber()
+            self.contactName.text = contact.name.isNilOrEmpty() ? "No Name" : contact.name
+            self.contactPhone.text = contact.phoneNumber?.getFormattedPhoneNumber() ?? "No Phone Number"
         } else {
-            self.contactName.text = ""
-            self.contactPhone.text = ""
+            self.contactName.text = "No Name"
+            self.contactPhone.text = "No Phone Number"
         }
     }
 

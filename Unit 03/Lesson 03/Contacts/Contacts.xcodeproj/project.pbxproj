@@ -20,6 +20,8 @@
 		E48F61911D90C205005B9F1C /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61901D90C205005B9F1C /* ContactDetailsViewController.swift */; };
 		E48F61931D90C5EA005B9F1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48F61921D90C5EA005B9F1C /* Images.xcassets */; };
 		E48F61961D90CC92005B9F1C /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61951D90CC92005B9F1C /* ContactTableViewCell.swift */; };
+		E48F61C51D91C559005B9F1C /* String?+isNilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */; };
+		E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C41D91C559005B9F1C /* String?+trim.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		E48F61901D90C205005B9F1C /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		E48F61921D90C5EA005B9F1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E48F61951D90CC92005B9F1C /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		E48F61981D914870005B9F1C /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
+		E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+isNilOrEmpty.swift"; sourceTree = "<group>"; };
+		E48F61C41D91C559005B9F1C /* String?+trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+trim.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,8 @@
 		E48F61541D8F7EAE005B9F1C /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				E48F61C71D91C569005B9F1C /* Extensions */,
+				E48F61971D91483E005B9F1C /* Playgrounds */,
 				E48F61941D90CC4B005B9F1C /* Miscellaneous */,
 				E48F618D1D8F8BFF005B9F1C /* Helpers */,
 				E48F61881D8F848E005B9F1C /* Models */,
@@ -189,6 +196,23 @@
 				E48F61951D90CC92005B9F1C /* ContactTableViewCell.swift */,
 			);
 			name = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		E48F61971D91483E005B9F1C /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				E48F61981D914870005B9F1C /* Playground.playground */,
+			);
+			name = Playgrounds;
+			sourceTree = "<group>";
+		};
+		E48F61C71D91C569005B9F1C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */,
+				E48F61C41D91C559005B9F1C /* String?+trim.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +352,11 @@
 			files = (
 				E48F618A1D8F84A3005B9F1C /* Contact.swift in Sources */,
 				E48F61851D8F8056005B9F1C /* ContactsTableViewController.swift in Sources */,
+				E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */,
 				E48F61911D90C205005B9F1C /* ContactDetailsViewController.swift in Sources */,
 				E48F61561D8F7EAE005B9F1C /* AppDelegate.swift in Sources */,
 				E48F61961D90CC92005B9F1C /* ContactTableViewCell.swift in Sources */,
+				E48F61C51D91C559005B9F1C /* String?+isNilOrEmpty.swift in Sources */,
 				E48F618C1D8F86BC005B9F1C /* PhoneNumber.swift in Sources */,
 				E48F618F1D8F8C44005B9F1C /* ContactHelper.swift in Sources */,
 			);

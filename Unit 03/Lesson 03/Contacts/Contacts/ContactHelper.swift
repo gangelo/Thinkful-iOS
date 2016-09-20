@@ -52,11 +52,17 @@ internal class ContactHelper {
     
     internal func getContacts() -> [Contact] {
         if (_contacts.count == 0) {
-            for name in _names {
-                _contacts.append(Contact(name: name, phoneNumber: getPhoneNumber()))
-            }
+            loadContacts()
         }
         return _contacts as! [Contact]
+    }
+    
+    private func loadContacts() {
+        for name in _names {
+            let _name = chance(oneIn: 5) ? "" : name
+            let _phoneNumber:PhoneNumber? = chance(oneIn: 5) ? nil : getPhoneNumber()
+            _contacts.append(Contact(name: _name, phoneNumber: _phoneNumber))
+        }
     }
     
     private func getPhoneNumber() -> PhoneNumber {
@@ -65,6 +71,10 @@ internal class ContactHelper {
         let lastFour = Int(arc4random_uniform(999) + 1)
         
         return PhoneNumber(areaCode: areaCode, firstThree: firstThree, lastFour: lastFour)
+    }
+    
+    private func chance(oneIn max: UInt32) -> Bool {
+        return (arc4random_uniform(max) + 1) == max
     }
 }
 

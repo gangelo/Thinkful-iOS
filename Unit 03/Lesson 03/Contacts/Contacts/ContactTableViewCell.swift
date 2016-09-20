@@ -36,10 +36,21 @@ class ContactTableViewCell: UITableViewCell {
     }
     
     private func initUI() {
+        var name = ""
+        var phoneNumber = ""
+
+        
         if let contact = self._contact {
-            self.contactInfo.text = "\(contact.name) \(contact.phoneNumber.getFormattedPhoneNumber())"
-        } else {
-            self.contactInfo.text = "?"
+            name = contact.name!
+            
+            if let number = contact.phoneNumber {
+                if !number.IsEmpty() {
+                    phoneNumber = number.getFormattedPhoneNumber()
+                }
+            }
         }
+        
+        
+        self.contactInfo.text = "\(name) \(phoneNumber)"
     }
 }

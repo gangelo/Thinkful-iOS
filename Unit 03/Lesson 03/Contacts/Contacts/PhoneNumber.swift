@@ -40,7 +40,15 @@ internal class PhoneNumber {
         set { _lastFour = newValue }
     }
     
+    public func IsEmpty() -> Bool {
+        return (areaCode == 0 && firstThree == 0 && lastFour == 0)
+    }
+    
     public func getFormattedPhoneNumber() -> String {
         return "(\(_areaCode)) \(_firstThree)-\(_lastFour)"
+    }
+    
+    public func getFormattedPhoneNumberOrDefault(defaultValue:String) -> String {
+        return IsEmpty() ? defaultValue : getFormattedPhoneNumber()
     }
 }
