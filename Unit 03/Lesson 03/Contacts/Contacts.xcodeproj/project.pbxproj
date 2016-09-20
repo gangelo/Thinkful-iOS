@@ -17,6 +17,8 @@
 		E48F618A1D8F84A3005B9F1C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61891D8F84A3005B9F1C /* Contact.swift */; };
 		E48F618C1D8F86BC005B9F1C /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F618B1D8F86BC005B9F1C /* PhoneNumber.swift */; };
 		E48F618F1D8F8C44005B9F1C /* ContactHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F618E1D8F8C44005B9F1C /* ContactHelper.swift */; };
+		E48F61911D90C205005B9F1C /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61901D90C205005B9F1C /* ContactDetailsViewController.swift */; };
+		E48F61931D90C5EA005B9F1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48F61921D90C5EA005B9F1C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		E48F61891D8F84A3005B9F1C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		E48F618B1D8F86BC005B9F1C /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		E48F618E1D8F8C44005B9F1C /* ContactHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactHelper.swift; sourceTree = "<group>"; };
+		E48F61901D90C205005B9F1C /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		E48F61921D90C5EA005B9F1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E48F61841D8F8056005B9F1C /* ContactsTableViewController.swift */,
+				E48F61901D90C205005B9F1C /* ContactDetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E48F615C1D8F7EAE005B9F1C /* Assets.xcassets */,
+				E48F61921D90C5EA005B9F1C /* Images.xcassets */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E48F61601D8F7EAE005B9F1C /* LaunchScreen.storyboard in Resources */,
+				E48F61931D90C5EA005B9F1C /* Images.xcassets in Resources */,
 				E48F615D1D8F7EAE005B9F1C /* Assets.xcassets in Resources */,
 				E48F615B1D8F7EAE005B9F1C /* Main.storyboard in Resources */,
 			);
@@ -310,6 +317,7 @@
 			files = (
 				E48F618A1D8F84A3005B9F1C /* Contact.swift in Sources */,
 				E48F61851D8F8056005B9F1C /* ContactsTableViewController.swift in Sources */,
+				E48F61911D90C205005B9F1C /* ContactDetailsViewController.swift in Sources */,
 				E48F61561D8F7EAE005B9F1C /* AppDelegate.swift in Sources */,
 				E48F618C1D8F86BC005B9F1C /* PhoneNumber.swift in Sources */,
 				E48F618F1D8F8C44005B9F1C /* ContactHelper.swift in Sources */,

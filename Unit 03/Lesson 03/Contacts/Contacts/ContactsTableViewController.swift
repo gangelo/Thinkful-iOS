@@ -38,9 +38,9 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
 
-        print(indexPath[1])
+        print(indexPath.row)
         
-        let contact = ContactHelper.instance.getContacts()[indexPath[1]]
+        let contact = ContactHelper.instance.getContacts()[indexPath.row]
         
         cell.textLabel?.text = "\(contact.name) \(contact.phoneNumber.getFormattedPhoneNumber())"
         
@@ -82,14 +82,28 @@ class ContactsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "viewContactDetail") {
+            let navigationController = segue.destination as! UINavigationController
+            
+            if let contactDetailsViewController = navigationController.topViewController as? ContactDetailsViewController {
+                if let cell = sender as? UITableViewCell {
+                    contactDetailsViewController.contact
+                }
+            }
+        }
     }
-    */
 
 }
+
+
+
+
+
+
+
