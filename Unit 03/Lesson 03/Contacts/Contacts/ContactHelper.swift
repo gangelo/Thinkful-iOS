@@ -10,7 +10,7 @@ import Foundation
 
 internal class ContactHelper {
     private static let _instance = ContactHelper()
-    private var _contacts = [Contact?]()
+    private var _contacts = [Contact]()
     private let _names = [
         "Latoyia Brisker",
         "Olivia Westray",
@@ -54,7 +54,15 @@ internal class ContactHelper {
         if (_contacts.count == 0) {
             loadContacts()
         }
-        return _contacts as! [Contact]
+        return _contacts
+    }
+    
+    internal func deleteContact(contact:Contact) -> Contact? {
+        if let index = _contacts.index(of: contact) {
+            return _contacts.remove(at: index)
+        }
+        
+        return nil
     }
     
     private func loadContacts() {
@@ -77,13 +85,3 @@ internal class ContactHelper {
         return (arc4random_uniform(max) + 1) == max
     }
 }
-
-
-
-
-
-
-
-
-
-

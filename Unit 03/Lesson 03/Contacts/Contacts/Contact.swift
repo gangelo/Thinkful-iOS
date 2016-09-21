@@ -16,7 +16,7 @@ internal class Contact : NSObject {
     override init() {
         self._name = nil
         self._phoneNumber = nil
-    
+        
         super.init()
     }
     
@@ -50,4 +50,18 @@ internal class Contact : NSObject {
         get { return _phoneNumber }
         set { _phoneNumber = newValue }
     }
+    
+    /*
+     static func ==(contactA: Contact, contactB: Contact) -> Bool {
+     print("Checking equality...")
+     if contactA == contactB {
+     return true
+     }
+     
+     let phoneNumberA = contactA.phoneNumber?.getFormattedPhoneNumber()
+     let phoneNumberB = contactB.phoneNumber?.getFormattedPhoneNumber()
+     
+     return (contactA.name == contactB.name && phoneNumberA == phoneNumberB)
+     }
+     */
 }
