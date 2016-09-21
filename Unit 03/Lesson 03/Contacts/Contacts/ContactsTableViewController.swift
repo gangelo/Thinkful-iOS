@@ -88,7 +88,7 @@ class ContactsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if (segue.identifier == "viewContactDetail") {
+        if (segue.identifier == "viewContactDetailSegue") {
             let navigationController = segue.destination as! UINavigationController
             if let contactDetailsViewController = navigationController.topViewController as? ContactDetailsViewController {
                 if let cell = sender as? ContactTableViewCell {

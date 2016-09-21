@@ -37,7 +37,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="contactInfo" destination="R6z-te-aqN" id="gAg-ZU-j8p"/>
-                                    <segue destination="0uj-8W-XPM" kind="showDetail" identifier="viewContactDetail" id="UrR-Yf-weh"/>
+                                    <segue destination="0uj-8W-XPM" kind="show" identifier="viewContactDetailSegue" action="showDetailViewController:sender:" id="UrR-Yf-weh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
