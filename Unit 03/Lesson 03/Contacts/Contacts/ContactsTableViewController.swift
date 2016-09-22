@@ -10,7 +10,7 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     // MARK: Properties
-    @IBOutlet var editButton: UIBarButtonItem!
+    @IBOutlet var editButton: ToggleBarButtonItem!
     
     private static let editButtonTitles = ["Edit", "Done"]
 
@@ -24,11 +24,9 @@ class ContactsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         // Add an edit button to initiate allowing the user to reorder contacts.
-        //self.editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: 
-        self.editButton = UIBarButtonItem(title: ContactsTableViewController.editButtonTitles.first, style: .plain, target: self, action: #selector(ContactsTableViewController.toggleEdit))
-        self.editButton.possibleTitles = Set<String>(ContactsTableViewController.editButtonTitles)
+        
+        self.editButton = ToggleBarButtonItem(titles: (title0: "Edit", title1: "Done"), style: .plain, target: self, action: #selector(ContactsTableViewController.toggleEdit))
         self.navigationItem.leftBarButtonItem = self.editButton
-        setButtonTitle()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,14 +57,10 @@ class ContactsTableViewController: UITableViewController {
     }
     
     func toggleEdit() {
+        editButton.toggle()
         tableView.setEditing(!tableView.isEditing, animated: true)
-        setButtonTitle()
     }
     
-    func setButtonTitle() {
-        editButton.title = ContactsTableViewController.editButtonTitles[tableView.isEditing.toInt()]
-    }
-
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true

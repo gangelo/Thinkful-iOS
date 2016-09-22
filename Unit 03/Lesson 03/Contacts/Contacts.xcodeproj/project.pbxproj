@@ -23,6 +23,8 @@
 		E48F61C51D91C559005B9F1C /* String?+isNilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */; };
 		E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C41D91C559005B9F1C /* String?+trim.swift */; };
 		E4DE83A31D933EE5000FB864 /* Bool+toInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */; };
+		E4DE83A51D936960000FB864 /* ToggleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE83A41D936960000FB864 /* ToggleBarButtonItem.swift */; };
+		E4DE83AB1D9373DE000FB864 /* Bool+toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE83AA1D9373DE000FB864 /* Bool+toggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+isNilOrEmpty.swift"; sourceTree = "<group>"; };
 		E48F61C41D91C559005B9F1C /* String?+trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+trim.swift"; sourceTree = "<group>"; };
 		E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+toInt.swift"; sourceTree = "<group>"; };
+		E4DE83A41D936960000FB864 /* ToggleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleBarButtonItem.swift; sourceTree = "<group>"; };
+		E4DE83AA1D9373DE000FB864 /* Bool+toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+toggle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E48F61951D90CC92005B9F1C /* ContactTableViewCell.swift */,
+				E4DE83A41D936960000FB864 /* ToggleBarButtonItem.swift */,
 			);
 			name = Miscellaneous;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 		E48F61C71D91C569005B9F1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E4DE83AA1D9373DE000FB864 /* Bool+toggle.swift */,
 				E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */,
 				E48F61C41D91C559005B9F1C /* String?+trim.swift */,
 				E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */,
@@ -355,12 +361,14 @@
 			files = (
 				E48F618A1D8F84A3005B9F1C /* Contact.swift in Sources */,
 				E48F61851D8F8056005B9F1C /* ContactsTableViewController.swift in Sources */,
+				E4DE83A51D936960000FB864 /* ToggleBarButtonItem.swift in Sources */,
 				E4DE83A31D933EE5000FB864 /* Bool+toInt.swift in Sources */,
 				E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */,
 				E48F61911D90C205005B9F1C /* ContactDetailsViewController.swift in Sources */,
 				E48F61561D8F7EAE005B9F1C /* AppDelegate.swift in Sources */,
 				E48F61961D90CC92005B9F1C /* ContactTableViewCell.swift in Sources */,
 				E48F61C51D91C559005B9F1C /* String?+isNilOrEmpty.swift in Sources */,
+				E4DE83AB1D9373DE000FB864 /* Bool+toggle.swift in Sources */,
 				E48F618C1D8F86BC005B9F1C /* PhoneNumber.swift in Sources */,
 				E48F618F1D8F8C44005B9F1C /* ContactHelper.swift in Sources */,
 			);
