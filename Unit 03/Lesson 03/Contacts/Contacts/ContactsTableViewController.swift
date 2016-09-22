@@ -9,6 +9,10 @@
 import UIKit
 
 class ContactsTableViewController: UITableViewController {
+    // MARK: Properties
+    @IBOutlet var editButton: UIBarButtonItem!
+    
+    private static let editButtonTitles = ["Edit", "Done"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +23,12 @@ class ContactsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let moveButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: Selector(("toggleEdit")))
-        navigationItem.leftBarButtonItem = moveButton
+        // Add an edit button to initiate allowing the user to reorder contacts.
+        //self.editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: 
+        self.editButton = UIBarButtonItem(title: ContactsTableViewController.editButtonTitles.first, style: .plain, target: self, action: #selector(ContactsTableViewController.toggleEdit))
+        self.editButton.possibleTitles = Set<String>(ContactsTableViewController.editButtonTitles)
+        self.navigationItem.leftBarButtonItem = self.editButton
+        setButtonTitle()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +56,15 @@ class ContactsTableViewController: UITableViewController {
     
     @IBAction func unwindToContactsTableViewController(segue: UIStoryboardSegue) {
         //nothing goes here
+    }
+    
+    func toggleEdit() {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+        setButtonTitle()
+    }
+    
+    func setButtonTitle() {
+        editButton.title = ContactsTableViewController.editButtonTitles[tableView.isEditing.toInt()]
     }
 
     // Override to support conditional editing of the table view.

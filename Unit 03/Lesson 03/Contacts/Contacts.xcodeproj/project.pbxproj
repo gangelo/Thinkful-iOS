@@ -22,6 +22,7 @@
 		E48F61961D90CC92005B9F1C /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61951D90CC92005B9F1C /* ContactTableViewCell.swift */; };
 		E48F61C51D91C559005B9F1C /* String?+isNilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */; };
 		E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C41D91C559005B9F1C /* String?+trim.swift */; };
+		E4DE83A31D933EE5000FB864 /* Bool+toInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		E48F61981D914870005B9F1C /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+isNilOrEmpty.swift"; sourceTree = "<group>"; };
 		E48F61C41D91C559005B9F1C /* String?+trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+trim.swift"; sourceTree = "<group>"; };
+		E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+toInt.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			children = (
 				E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */,
 				E48F61C41D91C559005B9F1C /* String?+trim.swift */,
+				E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				E48F618A1D8F84A3005B9F1C /* Contact.swift in Sources */,
 				E48F61851D8F8056005B9F1C /* ContactsTableViewController.swift in Sources */,
+				E4DE83A31D933EE5000FB864 /* Bool+toInt.swift in Sources */,
 				E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */,
 				E48F61911D90C205005B9F1C /* ContactDetailsViewController.swift in Sources */,
 				E48F61561D8F7EAE005B9F1C /* AppDelegate.swift in Sources */,
