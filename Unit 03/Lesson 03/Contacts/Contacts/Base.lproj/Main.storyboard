@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mfG-jL-2Bc" id="SDX-We-XdE">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glyphicons-593-person" translatesAutoresizingMaskIntoConstraints="NO" id="iSH-R1-VWi">
@@ -89,14 +89,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xfk-1u-exO" firstAttribute="leading" secondItem="Mip-6E-nYd" secondAttribute="trailing" constant="8" symbolic="YES" id="222-Gb-HiW"/>
-                            <constraint firstItem="xfk-1u-exO" firstAttribute="trailing" secondItem="bv7-55-3rw" secondAttribute="trailingMargin" id="MgT-Vu-9je"/>
-                            <constraint firstItem="Mip-6E-nYd" firstAttribute="leading" secondItem="fPt-hr-DEb" secondAttribute="leading" id="P1m-6V-mQB"/>
-                            <constraint firstItem="Mip-6E-nYd" firstAttribute="leading" secondItem="bv7-55-3rw" secondAttribute="leadingMargin" id="SXS-vt-euk"/>
+                            <constraint firstItem="Mip-6E-nYd" firstAttribute="centerY" secondItem="xfk-1u-exO" secondAttribute="centerY" id="2d2-5m-Yv8"/>
+                            <constraint firstItem="fPt-hr-DEb" firstAttribute="top" secondItem="Mip-6E-nYd" secondAttribute="bottom" constant="8" symbolic="YES" id="FDg-7Q-1Vv"/>
+                            <constraint firstItem="fPt-hr-DEb" firstAttribute="trailing" secondItem="bv7-55-3rw" secondAttribute="trailingMargin" id="GkY-Yx-meu"/>
                             <constraint firstItem="Mip-6E-nYd" firstAttribute="top" secondItem="iun-yP-lVH" secondAttribute="bottom" constant="8" symbolic="YES" id="Wee-M9-Pe4"/>
-                            <constraint firstItem="Mip-6E-nYd" firstAttribute="centerY" secondItem="xfk-1u-exO" secondAttribute="centerY" id="XcE-pc-U22"/>
-                            <constraint firstItem="fPt-hr-DEb" firstAttribute="top" secondItem="Mip-6E-nYd" secondAttribute="bottom" constant="8" symbolic="YES" id="inU-kX-wpA"/>
-                            <constraint firstItem="xfk-1u-exO" firstAttribute="trailing" secondItem="fPt-hr-DEb" secondAttribute="trailing" id="xuN-1i-9Tl"/>
+                            <constraint firstItem="fPt-hr-DEb" firstAttribute="trailing" secondItem="xfk-1u-exO" secondAttribute="trailing" id="Wl5-Qz-249"/>
+                            <constraint firstItem="xfk-1u-exO" firstAttribute="leading" secondItem="Mip-6E-nYd" secondAttribute="trailing" constant="8" symbolic="YES" id="wDF-db-SlZ"/>
+                            <constraint firstItem="fPt-hr-DEb" firstAttribute="leading" secondItem="Mip-6E-nYd" secondAttribute="leading" id="xRa-xD-BYc"/>
+                            <constraint firstItem="Mip-6E-nYd" firstAttribute="leading" secondItem="bv7-55-3rw" secondAttribute="leadingMargin" id="yRr-XU-XKw"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

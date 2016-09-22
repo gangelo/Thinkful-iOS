@@ -41,7 +41,7 @@ internal class ContactHelper {
         "Rachelle Gallivan",
         "Reuben Wallander",
         "Elmo Donatelli",
-        "Kasey Newhard"]
+        "Kasey Longnewhard Longfellow"]
     
     private init() {
     }
@@ -65,18 +65,34 @@ internal class ContactHelper {
         return nil
     }
     
+    internal func removeAtInded(index: Int) -> Contact {
+        return _contacts.remove(at: index)
+    }
+    
+    internal func insert(contact: Contact, at: Int) {
+        _contacts.insert(contact, at: at)
+    }
+    
     private func loadContacts() {
         for name in _names {
-            let _name = chance(oneIn: 5) ? "" : name
             let _phoneNumber:PhoneNumber? = chance(oneIn: 5) ? nil : getPhoneNumber()
+            
+            var _name = ""
+            
+            if (_phoneNumber == nil) {
+                _name = name
+            } else {
+                _name = chance(oneIn: 5) ? "" : name
+            }
+            
             _contacts.append(Contact(name: _name, phoneNumber: _phoneNumber))
         }
     }
     
     private func getPhoneNumber() -> PhoneNumber {
         let areaCode = 973
-        let firstThree = Int(arc4random_uniform(999) + 1)
-        let lastFour = Int(arc4random_uniform(999) + 1)
+        let firstThree = Int(arc4random_uniform(100) + 101)
+        let lastFour = Int(arc4random_uniform(1000) + 1001)
         
         return PhoneNumber(areaCode: areaCode, firstThree: firstThree, lastFour: lastFour)
     }

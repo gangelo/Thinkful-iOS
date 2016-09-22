@@ -3,45 +3,23 @@
 import UIKit
 
 
+var counter = 0
 
-
-var tuple = (1, 2)
-
-
-func testIt(titles: (title1: String, title2: String)) {
-    print(titles.title1)
-    print(titles.title2)
-    
-    titles.0
-}
-
-testIt(titles: (title1: "Edit", title2: "Done"))
-
-
-
-
-extension Bool {
-    
-    func toInt() -> Int {
-        return self ? 1 : 0
+for _ in 0..<100 {
+    let number = Int(arc4random_uniform(1000) + 1001)
+    if (number < 1000) {
+        print("*** no good ***")
+        counter = counter + 1
     }
-}
-
-extension Bool {
     
-    mutating func toggle() -> Bool {
-        self = !self
-        return self
+    if (number > 9999) {
+        print("*** no good ***")
+        counter = counter + 1
+
     }
+    
+    print(number)
+    
 }
 
-
-
-
-var bool = false
-
-bool.toInt()
-
-bool.toggle()
-
-bool.toggle()
+print("Total invalid numbers: \(counter))")

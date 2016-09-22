@@ -77,12 +77,12 @@ class ContactsTableViewController: UITableViewController {
         }    
     }
 
-    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        var contacts = ContactHelper.instance.getContacts()
+        let contactMoved = contacts.remove(at: fromIndexPath.row)
+        contacts.insert(contactMoved, at: to.row)
     }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.
