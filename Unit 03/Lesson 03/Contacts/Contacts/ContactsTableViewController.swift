@@ -107,6 +107,17 @@ class ContactsTableViewController: UITableViewController {
             }
         }
     }
+    
+    // These two methods remove the "-" button that appears after clicking the Edit button. 
+    // We want to do this because we implement swipe to delete, so having both would be
+    // redundant.
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return tableView.isEditing ? .none : .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
 }
 
 
