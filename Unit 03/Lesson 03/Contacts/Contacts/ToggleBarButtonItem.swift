@@ -9,8 +9,8 @@
 import UIKit
 
 internal class ToggleBarButtonItem : UIBarButtonItem {
-    private var _titles = (title0: "Edit", title1: "Done")
-    private var _toggleState = false
+    fileprivate var _titles = (title0: "Edit", title1: "Done")
+    fileprivate var _toggleState = false
     
     init(titles: (title0: String, title1: String), style: UIBarButtonItemStyle, target: AnyObject?, action: Selector?) {
         self._titles = titles
@@ -27,15 +27,15 @@ internal class ToggleBarButtonItem : UIBarButtonItem {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private override init() {
+    fileprivate override init() {
         super.init()
     }
     
-    public var titles : (title0: String, title1: String) {
+    open var titles : (title0: String, title1: String) {
         get { return _titles }
     }
     
-    public func toggle() {
+    open func toggle() {
         let index = _toggleState.toggle().toInt()
         title = [_titles.0, _titles.1][index]
     }

@@ -13,7 +13,7 @@ class ContactTableViewCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var contactInfo: UILabel!
     
-    private var _contact:Contact?
+    fileprivate var _contact:Contact?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +27,7 @@ class ContactTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    public var contact:Contact {
+    open var contact:Contact {
         get { return _contact! }
         set {
             _contact = newValue
@@ -35,7 +35,7 @@ class ContactTableViewCell: UITableViewCell {
         }
     }
     
-    private func initUI() {
+    fileprivate func initUI() {
         var name = ""
         var phoneNumber = ""
 

@@ -9,9 +9,9 @@
 import Foundation
 
 internal class PhoneNumber {
-    private var _areaCode:Int
-    private var _firstThree:Int
-    private var _lastFour:Int
+    fileprivate var _areaCode:Int
+    fileprivate var _firstThree:Int
+    fileprivate var _lastFour:Int
     
     init() {
         self._areaCode = 0
@@ -25,30 +25,30 @@ internal class PhoneNumber {
         self._lastFour = lastFour
     }
     
-    public var areaCode:Int {
+    open var areaCode:Int {
         get { return _areaCode }
         set { _areaCode = newValue }
     }
     
-    public var firstThree:Int {
+    open var firstThree:Int {
         get { return _firstThree }
         set { _firstThree = newValue }
     }
     
-    public var lastFour:Int {
+    open var lastFour:Int {
         get { return _lastFour }
         set { _lastFour = newValue }
     }
     
-    public func IsEmpty() -> Bool {
+    open func IsEmpty() -> Bool {
         return (areaCode == 0 && firstThree == 0 && lastFour == 0)
     }
     
-    public func getFormattedPhoneNumber() -> String {
+    open func getFormattedPhoneNumber() -> String {
         return "(\(_areaCode)) \(_firstThree)-\(_lastFour)"
     }
     
-    public func getFormattedPhoneNumberOrDefault(defaultValue:String) -> String {
+    open func getFormattedPhoneNumberOrDefault(_ defaultValue:String) -> String {
         return IsEmpty() ? defaultValue : getFormattedPhoneNumber()
     }
 }

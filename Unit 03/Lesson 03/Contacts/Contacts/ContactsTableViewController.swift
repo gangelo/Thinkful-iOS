@@ -12,7 +12,7 @@ class ContactsTableViewController: UITableViewController {
     // MARK: Properties
     @IBOutlet var editButton: ToggleBarButtonItem!
     
-    private static let editButtonTitles = ["Edit", "Done"]
+    fileprivate static let editButtonTitles = ["Edit", "Done"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +52,8 @@ class ContactsTableViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func unwindToContactsTableViewController(segue: UIStoryboardSegue) {
-        //nothing goes here
+    @IBAction func unwindToContactsTableViewController(_ segue: UIStoryboardSegue) {
+        // Nothing goes here
     }
     
     func toggleEdit() {
@@ -70,7 +70,7 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let contactTableViewCell = tableView.cellForRow(at: indexPath) as! ContactTableViewCell
-            let _ = ContactHelper.instance.deleteContact(contact: contactTableViewCell.contact)
+            let _ = ContactHelper.instance.deleteContact(contactTableViewCell.contact)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -108,7 +108,7 @@ class ContactsTableViewController: UITableViewController {
         }
     }
     
-    // These two methods remove the "-" button that appears after clicking the Edit button. 
+    // These two methods remove the "-" button that appears after clicking the Edit button.
     // We want to do this because we implement swipe to delete, so having both would be
     // redundant.
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {

@@ -8,25 +8,29 @@
 
 import UIKit
 
-class ContactDetailsViewController: UIViewController {
+class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
-    @IBOutlet weak var contactName: UILabel!
-    @IBOutlet weak var contactPhone: UILabel!
+    @IBOutlet weak var contactName: UITextField!
+    @IBOutlet weak var contactPhone: UITextField!
     
-    private var _contact:Contact?
+    fileprivate var _contact:Contact?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.contactName.delegate = self
+        self.contactPhone.delegate = self
+        
+        self.contactName.placeholder = "Name"
+        self.contactPhone.placeholder = "Phone"
         
         if let contact = _contact {
-            self.contactName.text = contact.name.isNilOrEmpty() ? "No Name" : contact.name
-            self.contactPhone.text = contact.phoneNumber?.getFormattedPhoneNumber() ?? "No Phone Number"
+            self.contactName.text = contact.name.isNilOrEmpty() ? "" : contact.name
+            self.contactPhone.text = contact.phoneNumber?.getFormattedPhoneNumber() ?? ""
         } else {
-            self.contactName.text = "No Name"
-            self.contactPhone.text = "No Phone Number"
+            self.contactName.text = ""
+            self.contactPhone.text = ""
         }
     }
 
@@ -46,11 +50,12 @@ class ContactDetailsViewController: UIViewController {
     }
     */
     
-    public var contact:Contact? {
+    open var contact:Contact? {
         get { return _contact }
         set { _contact = newValue }
     }
     
-    @IBAction func unwindToContactsTableViewController(segue : UIStoryboardSegue) {
+    @IBAction func unwindToContactsTableViewController(_ segue : UIStoryboardSegue) {
+        // Nothing goes here
     }
 }

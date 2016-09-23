@@ -37,6 +37,7 @@
                                     <constraints>
                                         <constraint firstItem="iSH-R1-VWi" firstAttribute="leading" secondItem="SDX-We-XdE" secondAttribute="leadingMargin" id="Fa1-Qz-Qzr"/>
                                         <constraint firstItem="R6z-te-aqN" firstAttribute="trailing" secondItem="SDX-We-XdE" secondAttribute="trailingMargin" id="KGf-Y4-T1Q"/>
+                                        <constraint firstItem="iSH-R1-VWi" firstAttribute="bottom" secondItem="SDX-We-XdE" secondAttribute="bottomMargin" id="LjN-RU-xYb"/>
                                         <constraint firstItem="iSH-R1-VWi" firstAttribute="centerY" secondItem="R6z-te-aqN" secondAttribute="centerY" id="VrP-u3-WOL"/>
                                         <constraint firstItem="R6z-te-aqN" firstAttribute="leading" secondItem="iSH-R1-VWi" secondAttribute="trailing" constant="8" symbolic="YES" id="ddt-jq-PFe"/>
                                         <constraint firstItem="iSH-R1-VWi" firstAttribute="centerY" secondItem="SDX-We-XdE" secondAttribute="centerY" id="kgN-iv-kDr"/>
@@ -71,46 +72,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glyphicons-593-person" translatesAutoresizingMaskIntoConstraints="NO" id="Mip-6E-nYd">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="21" id="DAr-To-aAq"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfk-1u-exO">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glyphicons-593-person" translatesAutoresizingMaskIntoConstraints="NO" id="Mip-6E-nYd"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agg-fE-R57">
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPt-hr-DEb">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OcV-8q-04R">
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Mip-6E-nYd" firstAttribute="centerY" secondItem="xfk-1u-exO" secondAttribute="centerY" id="2d2-5m-Yv8"/>
-                            <constraint firstItem="fPt-hr-DEb" firstAttribute="top" secondItem="Mip-6E-nYd" secondAttribute="bottom" constant="8" symbolic="YES" id="FDg-7Q-1Vv"/>
-                            <constraint firstItem="fPt-hr-DEb" firstAttribute="trailing" secondItem="bv7-55-3rw" secondAttribute="trailingMargin" id="GkY-Yx-meu"/>
-                            <constraint firstItem="Mip-6E-nYd" firstAttribute="top" secondItem="iun-yP-lVH" secondAttribute="bottom" constant="8" symbolic="YES" id="Wee-M9-Pe4"/>
-                            <constraint firstItem="fPt-hr-DEb" firstAttribute="trailing" secondItem="xfk-1u-exO" secondAttribute="trailing" id="Wl5-Qz-249"/>
-                            <constraint firstItem="xfk-1u-exO" firstAttribute="leading" secondItem="Mip-6E-nYd" secondAttribute="trailing" constant="8" symbolic="YES" id="wDF-db-SlZ"/>
-                            <constraint firstItem="fPt-hr-DEb" firstAttribute="leading" secondItem="Mip-6E-nYd" secondAttribute="leading" id="xRa-xD-BYc"/>
-                            <constraint firstItem="Mip-6E-nYd" firstAttribute="leading" secondItem="bv7-55-3rw" secondAttribute="leadingMargin" id="yRr-XU-XKw"/>
+                            <constraint firstItem="Mip-6E-nYd" firstAttribute="top" secondItem="iun-yP-lVH" secondAttribute="bottom" constant="8" symbolic="YES" id="J0P-q7-57v"/>
+                            <constraint firstItem="Mip-6E-nYd" firstAttribute="top" secondItem="Agg-fE-R57" secondAttribute="top" id="Mh2-e0-wvJ"/>
+                            <constraint firstItem="Mip-6E-nYd" firstAttribute="leading" secondItem="OcV-8q-04R" secondAttribute="leading" id="afy-6J-ys7"/>
+                            <constraint firstItem="Agg-fE-R57" firstAttribute="leading" secondItem="Mip-6E-nYd" secondAttribute="trailing" constant="8" symbolic="YES" id="c44-2j-AVo"/>
+                            <constraint firstItem="Agg-fE-R57" firstAttribute="trailing" secondItem="OcV-8q-04R" secondAttribute="trailing" id="mbj-sV-zUc"/>
+                            <constraint firstItem="Agg-fE-R57" firstAttribute="trailing" secondItem="bv7-55-3rw" secondAttribute="trailingMargin" id="p4u-ZZ-MhD"/>
+                            <constraint firstItem="OcV-8q-04R" firstAttribute="top" secondItem="Agg-fE-R57" secondAttribute="bottom" constant="8" symbolic="YES" id="rRb-mz-vzv"/>
+                            <constraint firstItem="Mip-6E-nYd" firstAttribute="leading" secondItem="bv7-55-3rw" secondAttribute="leadingMargin" id="vGm-p9-yWa"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Contact Details" id="7u3-lI-QIs">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="ZMN-vj-noI" userLabel="Back">
                             <connections>
-                                <segue destination="epB-Fe-nNb" kind="unwind" unwindAction="unwindToContactsTableViewControllerWithSegue:" id="vOg-Ko-kJe"/>
+                                <segue destination="epB-Fe-nNb" kind="unwind" unwindAction="unwindToContactsTableViewController:" id="R84-d6-fWG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="contactName" destination="xfk-1u-exO" id="RcZ-bb-Xhp"/>
-                        <outlet property="contactPhone" destination="fPt-hr-DEb" id="l2s-aH-vtR"/>
+                        <outlet property="contactName" destination="Agg-fE-R57" id="UAT-gC-p9Y"/>
+                        <outlet property="contactPhone" destination="OcV-8q-04R" id="xM0-eD-Z7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wT4-n1-GPE" userLabel="First Responder" sceneMemberID="firstResponder"/>

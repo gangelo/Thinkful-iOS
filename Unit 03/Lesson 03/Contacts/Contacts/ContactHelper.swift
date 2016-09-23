@@ -9,9 +9,9 @@
 import Foundation
 
 internal class ContactHelper {
-    private static let _instance = ContactHelper()
-    private var _contacts = [Contact]()
-    private let _names = [
+    fileprivate static let _instance = ContactHelper()
+    fileprivate var _contacts = [Contact]()
+    fileprivate let _names = [
         "Latoyia Brisker",
         "Olivia Westray",
         "Tanja Hawk",
@@ -43,7 +43,7 @@ internal class ContactHelper {
         "Elmo Donatelli",
         "Kasey Longnewhard Longfellow"]
     
-    private init() {
+    fileprivate init() {
     }
     
     internal static var instance:ContactHelper {
@@ -57,7 +57,7 @@ internal class ContactHelper {
         return _contacts
     }
     
-    internal func deleteContact(contact:Contact) -> Contact? {
+    internal func deleteContact(_ contact:Contact) -> Contact? {
         if let index = _contacts.index(of: contact) {
             return _contacts.remove(at: index)
         }
@@ -65,15 +65,15 @@ internal class ContactHelper {
         return nil
     }
     
-    internal func removeAtInded(index: Int) -> Contact {
+    internal func removeAtInded(_ index: Int) -> Contact {
         return _contacts.remove(at: index)
     }
     
-    internal func insert(contact: Contact, at: Int) {
+    internal func insert(_ contact: Contact, at: Int) {
         _contacts.insert(contact, at: at)
     }
     
-    private func loadContacts() {
+    fileprivate func loadContacts() {
         for name in _names {
             let _phoneNumber:PhoneNumber? = chance(oneIn: 5) ? nil : getPhoneNumber()
             
@@ -89,7 +89,7 @@ internal class ContactHelper {
         }
     }
     
-    private func getPhoneNumber() -> PhoneNumber {
+    fileprivate func getPhoneNumber() -> PhoneNumber {
         let areaCode = 973
         let firstThree = Int(arc4random_uniform(100) + 101)
         let lastFour = Int(arc4random_uniform(1000) + 1001)
@@ -97,7 +97,7 @@ internal class ContactHelper {
         return PhoneNumber(areaCode: areaCode, firstThree: firstThree, lastFour: lastFour)
     }
     
-    private func chance(oneIn max: UInt32) -> Bool {
+    fileprivate func chance(oneIn max: UInt32) -> Bool {
         return (arc4random_uniform(max) + 1) == max
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 
 
 internal class Contact : NSObject {
-    private var _name:String?
-    private var _phoneNumber:PhoneNumber?
+    fileprivate var _name:String?
+    fileprivate var _phoneNumber:PhoneNumber?
     
     override init() {
         self._name = nil
