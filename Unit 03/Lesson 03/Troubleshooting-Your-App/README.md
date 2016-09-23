@@ -1,9 +1,18 @@
-# Swift Debugging Practice
+# Thinkful-iOS Repository 
 
-A simple console game written in Swift that aims to compare three user guesses (randomly generated in this exercise) to a random number between 1-10. If any guesses match the player wins.
+![N|Solid](https://cldup.com/vkMWNVd08U.png)
 
-# Notes
+## Overview
+This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [Thinkful-iOS repository][thinkful_ios_repro] is a larger series of xcode iPhone App projects and playgrounds written in Swift 3.0, as a result of going through the [Thinkful][thinkful] _iOS Programming in Swift course_.
 
-This project is part of Thinkful's course [Intro to iOS Programming in Swift](http://thinkful.com)
+## Contained In This Folder
 
-Included is a simple XCode project that serves as a companion to [this video](https://vimeo.com/112539013).
+| Project        | Description | 
+|:-------------|:-------------|
+| [Troubleshooting-Your-App][troubleshooting] | A simple iPhone app used to practice advanced troubleshooting and debugging techniques using xcode |
+
+
+   [thinkful]: <http://thinkful.com>
+   [thinkful_ios_repro]:<https://github.com/gangelo/Thinkful-iOS>
+   
+   [troubleshooting]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2003/Troubleshooting-Your-App>
