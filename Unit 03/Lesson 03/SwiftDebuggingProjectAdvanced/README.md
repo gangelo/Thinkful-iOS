@@ -1,8 +1,19 @@
-# Swift Debugging Advanced
+# Thinkful-iOS Repository 
 
-A simple game written in Swift with several intentional errors, for resolving in the Xcode.
-The player guesses a number the computer has chosen between 1 and 10.
+![N|Solid](https://cldup.com/vkMWNVd08U.png)
 
-# Notes
+## Overview
+This project is part of the [Thinkful-iOS repository][thinkful_ios_repro]. The [Thinkful-iOS repository][thinkful_ios_repro] is a larger series of xcode iPhone App projects and playgrounds written in Swift 3.0, as a result of going through the [Thinkful][thinkful] _iOS Programming in Swift course_.
 
-This project is part of Thinkful's course [Intro to iOS Programming in Swift](http://thinkful.com)
+## Contained In This Folder
+
+| Project        | Description | 
+|:-------------|:-------------|
+| [SwiftDebuggingProjectAdvanced][debugging_advanced] | A simple plaground used to practice advanced debugging techniques using xcode. |
+
+
+
+   [thinkful]: <http://thinkful.com>
+   [thinkful_ios_repro]:<https://github.com/gangelo/Thinkful-iOS>
+  
+   [debugging_advanced]: <https://github.com/gangelo/Thinkful-iOS/tree/master/Unit%2003/Lesson%2003/SwiftDebuggingProjectAdvanced>
