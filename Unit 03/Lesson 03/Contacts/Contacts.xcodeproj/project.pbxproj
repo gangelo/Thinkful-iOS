@@ -22,6 +22,7 @@
 		E48F61961D90CC92005B9F1C /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61951D90CC92005B9F1C /* ContactTableViewCell.swift */; };
 		E48F61C51D91C559005B9F1C /* String?+isNilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */; };
 		E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F61C41D91C559005B9F1C /* String?+trim.swift */; };
+		E4A93C2B1D96957400B774E8 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A93C2A1D96957400B774E8 /* PhoneTextField.swift */; };
 		E4DE83A31D933EE5000FB864 /* Bool+toInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */; };
 		E4DE83A51D936960000FB864 /* ToggleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE83A41D936960000FB864 /* ToggleBarButtonItem.swift */; };
 		E4DE83AB1D9373DE000FB864 /* Bool+toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE83AA1D9373DE000FB864 /* Bool+toggle.swift */; };
@@ -67,6 +68,7 @@
 		E48F61981D914870005B9F1C /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		E48F61C31D91C559005B9F1C /* String?+isNilOrEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+isNilOrEmpty.swift"; sourceTree = "<group>"; };
 		E48F61C41D91C559005B9F1C /* String?+trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String?+trim.swift"; sourceTree = "<group>"; };
+		E4A93C2A1D96957400B774E8 /* PhoneTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+toInt.swift"; sourceTree = "<group>"; };
 		E4DE83A41D936960000FB864 /* ToggleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleBarButtonItem.swift; sourceTree = "<group>"; };
 		E4DE83AA1D9373DE000FB864 /* Bool+toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+toggle.swift"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		E48F61491D8F7EAE005B9F1C = {
 			isa = PBXGroup;
 			children = (
+				E4A93C291D9693ED00B774E8 /* Controls */,
 				E48F61541D8F7EAE005B9F1C /* Contacts */,
 				E48F61691D8F7EAF005B9F1C /* ContactsTests */,
 				E48F61741D8F7EAF005B9F1C /* ContactsUITests */,
@@ -120,15 +123,15 @@
 		E48F61541D8F7EAE005B9F1C /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				E48F61C71D91C569005B9F1C /* Extensions */,
-				E48F61971D91483E005B9F1C /* Playgrounds */,
-				E48F61941D90CC4B005B9F1C /* Miscellaneous */,
-				E48F618D1D8F8BFF005B9F1C /* Helpers */,
-				E48F61881D8F848E005B9F1C /* Models */,
 				E48F61551D8F7EAE005B9F1C /* AppDelegate.swift */,
-				E48F61831D8F8003005B9F1C /* Storyboards */,
 				E48F61871D8F80A1005B9F1C /* Assets */,
+				E48F61C71D91C569005B9F1C /* Extensions */,
+				E48F618D1D8F8BFF005B9F1C /* Helpers */,
 				E48F61611D8F7EAE005B9F1C /* Info.plist */,
+				E48F61941D90CC4B005B9F1C /* Miscellaneous */,
+				E48F61881D8F848E005B9F1C /* Models */,
+				E48F61971D91483E005B9F1C /* Playgrounds */,
+				E48F61831D8F8003005B9F1C /* Storyboards */,
 				E48F61861D8F808A005B9F1C /* ViewControllers */,
 			);
 			path = Contacts;
@@ -222,6 +225,14 @@
 				E4DE83A21D933EE5000FB864 /* Bool+toInt.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E4A93C291D9693ED00B774E8 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				E4A93C2A1D96957400B774E8 /* PhoneTextField.swift */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 				E4DE83A51D936960000FB864 /* ToggleBarButtonItem.swift in Sources */,
 				E4DE83A31D933EE5000FB864 /* Bool+toInt.swift in Sources */,
 				E48F61C61D91C559005B9F1C /* String?+trim.swift in Sources */,
+				E4A93C2B1D96957400B774E8 /* PhoneTextField.swift in Sources */,
 				E48F61911D90C205005B9F1C /* ContactDetailsViewController.swift in Sources */,
 				E48F61561D8F7EAE005B9F1C /* AppDelegate.swift in Sources */,
 				E48F61961D90CC92005B9F1C /* ContactTableViewCell.swift in Sources */,

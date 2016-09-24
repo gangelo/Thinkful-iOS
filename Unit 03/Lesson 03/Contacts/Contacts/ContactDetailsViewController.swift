@@ -8,42 +8,12 @@
 
 import UIKit
 
-let regexPattern = "^(?:(?:\\+?1\\s*(?:[.-]\\s*)?)?(?:\\(\\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\\s*\\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\\s*(?:[.-]\\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\\s*(?:[.-]\\s*)?([0-9]{4})(?:\\s*(?:#|x\\.?|ext\\.?|extension)\\s*(\\d+))?$"
-
-extension String {
-    func capturedGroups(withRegex pattern: String) -> [String]? {
-        var regex: NSRegularExpression
-        do {
-            regex = try NSRegularExpression(pattern: pattern, options: [.dotMatchesLineSeparators])
-        } catch {
-            return nil
-        }
-        
-        let matches = regex.matches(in: self, options: [], range: NSMakeRange(0, utf16.count))
-        
-        guard let match = matches.first else { return nil }
-        
-        // Note: Index 1 is 1st capture group, 2 is 2nd, ..., while index 0 is full match which we don't use
-        let lastRangeIndex = match.numberOfRanges - 1
-        guard lastRangeIndex >= 1 else { return nil }
-        
-        var results = [String]()
-        
-        for i in 1...lastRangeIndex {
-            let capturedGroupIndex = match.rangeAt(i)
-            let matchedString = (self as NSString).substring(with: capturedGroupIndex)
-            results.append(matchedString)
-        }
-        
-        return results
-    }
-}
 
 class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     @IBOutlet weak var contactName: UITextField!
-    @IBOutlet weak var contactPhone: UITextField!
+    @IBOutlet weak var contactPhone: PhoneTextField!
     
     fileprivate var _contact:Contact?
 
@@ -54,7 +24,6 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
         self.contactPhone.delegate = self
         
         self.contactName.placeholder = "Name"
-        self.contactPhone.placeholder = "Phone"
         
         if let contact = _contact {
             self.contactName.text = contact.name.isNilOrEmpty() ? "" : contact.name
@@ -96,12 +65,16 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
              _contact?.name = contactName
             }
         } else if textField == self.contactPhone {
-            if self.contactPhone.text != nil {
-                let contactPhone = self.contactPhone.text
-                let groups = contactPhone?.capturedGroups(withRegex: regexPattern)
-                let _ = groups?.count
+            let parts = self.contactPhone.phoneNumberParts
+            if let parts = parts {
+                if let phoneNumber = _contact?.phoneNumber {
+                    phoneNumber.areaCode = parts.areaCode
+                    phoneNumber.firstThree = parts.first3
+                    phoneNumber.lastFour = parts.last4
+                } else {
+                    _contact?.phoneNumber = PhoneNumber(areaCode: parts.areaCode, firstThree: parts.first3, lastFour: parts.last4)
+                }
             }
-
         }
     }
     
