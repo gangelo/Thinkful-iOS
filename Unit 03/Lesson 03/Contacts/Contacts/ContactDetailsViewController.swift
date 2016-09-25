@@ -27,7 +27,11 @@ class ContactDetailsViewController: UIViewController, UITextFieldDelegate {
         
         if let contact = _contact {
             self.contactName.text = contact.name.isNilOrEmpty() ? "" : contact.name
-            self.contactPhone.text = contact.phoneNumber?.getFormattedPhoneNumber() ?? ""
+            if (self.contactPhone.isValid()) {
+                self.contactPhone.text = contact.phoneNumber?.getFormattedPhoneNumber() ?? ""
+            } else {
+                self.contactPhone.text = ""
+            }
         } else {
             self.contactName.text = ""
             self.contactPhone.text = ""

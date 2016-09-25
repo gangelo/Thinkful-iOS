@@ -11,6 +11,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
     // MARK: Properties
     @IBOutlet var editButton: ToggleBarButtonItem!
+    @IBOutlet var addButton: UIBarButtonItem!
     
     fileprivate static let editButtonTitles = ["Edit", "Done"]
 
@@ -24,9 +25,12 @@ class ContactsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         // Add an edit button to initiate allowing the user to reorder contacts.
-        
         self.editButton = ToggleBarButtonItem(titles: (title0: "Edit", title1: "Done"), style: .plain, target: self, action: #selector(ContactsTableViewController.toggleEdit))
         self.navigationItem.leftBarButtonItem = self.editButton
+        
+        // Add an Add Contact button to add contacts.
+        self.addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(ContactsTableViewController.addContact))
+        self.navigationItem.rightBarButtonItem = self.addButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +63,15 @@ class ContactsTableViewController: UITableViewController {
     func toggleEdit() {
         editButton.toggle()
         tableView.setEditing(!tableView.isEditing, animated: true)
+    }
+    
+    func addContact() {
+        let newContact = Contact(name: "New Contact")
+        ContactHelper.instance.append(contact: newContact)
+        let newIndexPath = IndexPath(row: ContactHelper.instance.getContacts().count - 1, section: 0)
+        self.tableView.insertRows(at: [newIndexPath], with: .automatic)
+        // open func scrollToRow(at indexPath: IndexPath, at scrollPosition: UITableViewScrollPosition, animated: Bool)
+        self.tableView.scrollToRow(at: newIndexPath, at: UITableViewScrollPosition.bottom, animated: true)
     }
     
     // Override to support conditional editing of the table view.
@@ -117,6 +130,11 @@ class ContactsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 }
 

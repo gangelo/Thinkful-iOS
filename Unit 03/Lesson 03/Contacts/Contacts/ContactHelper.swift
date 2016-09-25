@@ -73,6 +73,10 @@ internal class ContactHelper {
         _contacts.insert(contact, at: at)
     }
     
+    internal func append(contact: Contact) {
+        _contacts.append(contact)
+    }
+    
     fileprivate func loadContacts() {
         for name in _names {
             let _phoneNumber:PhoneNumber? = chance(oneIn: 5) ? nil : getPhoneNumber()
