@@ -99,9 +99,8 @@
 			children = (
 				E4A93C381D98454F00B774E8 /* AppDelegate.swift */,
 				E4A93C3A1D98454F00B774E8 /* ViewController.swift */,
-				E4A93C3C1D98454F00B774E8 /* Main.storyboard */,
+				E4A93C661D9845A900B774E8 /* Storyboards */,
 				E4A93C3F1D98454F00B774E8 /* Assets.xcassets */,
-				E4A93C411D98454F00B774E8 /* LaunchScreen.storyboard */,
 				E4A93C441D98454F00B774E8 /* Info.plist */,
 			);
 			path = "Web Service Example";
@@ -123,6 +122,15 @@
 				E4A93C5A1D98454F00B774E8 /* Info.plist */,
 			);
 			path = "Web Service ExampleUITests";
+			sourceTree = "<group>";
+		};
+		E4A93C661D9845A900B774E8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E4A93C3C1D98454F00B774E8 /* Main.storyboard */,
+				E4A93C411D98454F00B774E8 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
