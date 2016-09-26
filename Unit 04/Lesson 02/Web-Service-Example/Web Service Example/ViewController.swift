@@ -40,10 +40,10 @@ class ViewController: UIViewController {
                     var townName = "Town Unavailable"
                     var townWeather = "Weather Unavailable"
                     
-                    if let json = data as? Dictionary<String, AnyObject> {
-                        townName = self.getTownName(json: json) ?? townName
-                        townWeather = self.getTownWeather(json: json) ?? townWeather
-                    }
+                    let json:JSON = JSON(data)
+                    townName = self.getTownName(json: json) ?? townName
+                    townWeather = self.getTownWeather(json: json) ?? townWeather
+                    
                     
                     self.forecastLabel.text = "\(townName) \(townWeather)"
                 })
@@ -53,19 +53,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func getTownName(json: Dictionary<String, AnyObject>) -> String? {
-        return json["name"] as? String ?? nil
+    func getTownName(json: JSON) -> String? {
+        return json["name"].string
     }
     
-    func getTownWeather(json: Dictionary<String, AnyObject>) -> String? {
-        if let weatherObject = json["weather"] as? [AnyObject] {
-            if let weatherObjectElements = weatherObject[0] as? [String:AnyObject]  {
-                if let weatherDescription = weatherObjectElements["description"] {
-                    return weatherDescription as? String
-                }
-            }
-        }
-        return nil
+    func getTownWeather(json: JSON) -> String? {
+        return json["weather"][0]["description"].string
     }
 }
 

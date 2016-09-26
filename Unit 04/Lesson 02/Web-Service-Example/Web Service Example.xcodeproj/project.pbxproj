@@ -34,6 +34,7 @@
 		E4C0E5DD1D989F3300607097 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0E5CA1D989F3300607097 /* TaskDelegate.swift */; };
 		E4C0E5DE1D989F3300607097 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0E5CB1D989F3300607097 /* Timeline.swift */; };
 		E4C0E5DF1D989F3300607097 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0E5CC1D989F3300607097 /* Validation.swift */; };
+		E4C0E5E21D98CA3800607097 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0E5E11D98CA3800607097 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		E4C0E5CB1D989F3300607097 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		E4C0E5CC1D989F3300607097 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		E4C0E5E01D98B9DF00607097 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
+		E4C0E5E11D98CA3800607097 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +143,7 @@
 		E4A93C371D98454F00B774E8 /* Web Service Example */ = {
 			isa = PBXGroup;
 			children = (
-				E4C0E5B81D989F3300607097 /* Alamofire */,
+				E4C0E5E41D98CA5300607097 /* 3rd-Party Frameworks */,
 				E4A93C381D98454F00B774E8 /* AppDelegate.swift */,
 				E4A93C3A1D98454F00B774E8 /* ViewController.swift */,
 				E4A93C661D9845A900B774E8 /* Storyboards */,
@@ -204,6 +206,23 @@
 			);
 			name = Alamofire;
 			path = Source;
+			sourceTree = "<group>";
+		};
+		E4C0E5E31D98CA4000607097 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				E4C0E5E11D98CA3800607097 /* SwiftyJSON.swift */,
+			);
+			name = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		E4C0E5E41D98CA5300607097 /* 3rd-Party Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4C0E5B81D989F3300607097 /* Alamofire */,
+				E4C0E5E31D98CA4000607097 /* SwiftyJSON */,
+			);
+			name = "3rd-Party Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +365,7 @@
 				E4C0E5DE1D989F3300607097 /* Timeline.swift in Sources */,
 				E4C0E5D51D989F3300607097 /* ParameterEncoding.swift in Sources */,
 				E4C0E5D91D989F3300607097 /* Result.swift in Sources */,
+				E4C0E5E21D98CA3800607097 /* SwiftyJSON.swift in Sources */,
 				E4C0E5D41D989F3300607097 /* Notifications.swift in Sources */,
 				E4C0E5D31D989F3300607097 /* NetworkReachabilityManager.swift in Sources */,
 				E4C0E5D21D989F3300607097 /* MultipartFormData.swift in Sources */,
