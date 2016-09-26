@@ -88,6 +88,7 @@
 		E4C0E5CA1D989F3300607097 /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
 		E4C0E5CB1D989F3300607097 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		E4C0E5CC1D989F3300607097 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		E4C0E5E01D98B9DF00607097 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 		E4A93C2C1D98454F00B774E8 = {
 			isa = PBXGroup;
 			children = (
+				E4C0E5E01D98B9DF00607097 /* Playground.playground */,
 				E4A93C7E1D9889AF00B774E8 /* keys.private */,
 				E4A93C371D98454F00B774E8 /* Web Service Example */,
 				E4A93C4C1D98454F00B774E8 /* Web Service ExampleTests */,

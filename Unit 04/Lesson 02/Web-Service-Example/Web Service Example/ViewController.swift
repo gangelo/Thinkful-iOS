@@ -37,15 +37,35 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(let data):
                 DispatchQueue.main.async(execute: {
-                    //let town = data["name"]
-                    //let weather = data.weather.description
-                    //forecastLabel.text = "\(town): \(weather)"
-                    print(data)
+                    var townName = "Town Unavailable"
+                    var townWeather = "Weather Unavailable"
+                    
+                    if let json = data as? Dictionary<String, AnyObject> {
+                        townName = self.getTownName(json: json) ?? townName
+                        townWeather = self.getTownWeather(json: json) ?? townWeather
+                    }
+                    
+                    self.forecastLabel.text = "\(townName) \(townWeather)"
                 })
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func getTownName(json: Dictionary<String, AnyObject>) -> String? {
+        return json["name"] as? String ?? nil
+    }
+    
+    func getTownWeather(json: Dictionary<String, AnyObject>) -> String? {
+        if let weatherObject = json["weather"] as? [AnyObject] {
+            if let weatherObjectElements = weatherObject[0] as? [String:AnyObject]  {
+                if let weatherDescription = weatherObjectElements["description"] {
+                    return weatherDescription as? String
+                }
+            }
+        }
+        return nil
     }
 }
 
