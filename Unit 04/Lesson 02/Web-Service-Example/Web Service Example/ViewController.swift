@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.townLabel.text = ""
+        self.forecastLabel.text = ""
+        
         callWeatherService()
     }
 
@@ -31,9 +35,6 @@ class ViewController: UIViewController {
     }
     
     func callWeatherService() {
-        self.townLabel.text = ""
-        self.forecastLabel.text = ""
-
         let url = "http://api.openweathermap.org/data/2.5/weather?zip=07005,us&appid=\(openWeatherMapAPIKey)"
         
         // Alamofire call to fetch location data

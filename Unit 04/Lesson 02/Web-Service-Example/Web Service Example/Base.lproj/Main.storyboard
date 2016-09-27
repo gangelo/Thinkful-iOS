@@ -32,9 +32,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpj-cF-Pfe">
-                                <frame key="frameInset" minX="166" minY="602" width="45" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpj-cF-Pfe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="K4x-83-h9d"/>
+                                    <constraint firstAttribute="width" constant="45" id="Uv0-C5-hma"/>
+                                </constraints>
                                 <state key="normal" image="refresh"/>
                                 <connections>
                                     <action selector="refreshWeather" destination="BYZ-38-t0r" eventType="touchUpInside" id="ing-hn-y4R"/>
@@ -43,8 +45,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ytv-y4-QW9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Awl-0r-MiC"/>
-                            <constraint firstItem="ytv-y4-QW9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z7O-tR-F3y"/>
+                            <constraint firstItem="ytv-y4-QW9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4gD-pr-6rS"/>
+                            <constraint firstAttribute="bottom" secondItem="dpj-cF-Pfe" secondAttribute="bottom" constant="20" symbolic="YES" id="iYB-Ha-iYv"/>
+                            <constraint firstItem="dpj-cF-Pfe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o3S-Ls-dhR"/>
+                            <constraint firstItem="ytv-y4-QW9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xAX-IT-Kvh"/>
                         </constraints>
                     </view>
                     <connections>
