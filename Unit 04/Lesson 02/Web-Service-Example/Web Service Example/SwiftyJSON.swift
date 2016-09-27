@@ -159,7 +159,7 @@ public struct JSON {
             _error = nil
             switch newValue {
             case let number as NSNumber:
-                if number.isSwiftyJSONBool {
+                if number.isBool {
                     _type = .bool
                     self.rawBool = number.boolValue
                 } else {
@@ -1174,7 +1174,7 @@ private let falseObjCType = String(cString: falseNumber.objCType)
 // MARK: - NSNumber: Comparable
 
 extension NSNumber {
-    var isSwiftyJSONBool:Bool {
+    var isBool:Bool {
         get {
             let objCType = String(cString: self.objCType)
             if (self.compare(trueNumber) == ComparisonResult.orderedSame && objCType == trueObjCType)
@@ -1188,7 +1188,7 @@ extension NSNumber {
 }
 
 func ==(lhs: NSNumber, rhs: NSNumber) -> Bool {
-    switch (lhs.isSwiftyJSONBool, rhs.isSwiftyJSONBool) {
+    switch (lhs.isBool, rhs.isBool) {
     case (false, true):
         return false
     case (true, false):
@@ -1204,7 +1204,7 @@ func !=(lhs: NSNumber, rhs: NSNumber) -> Bool {
 
 func <(lhs: NSNumber, rhs: NSNumber) -> Bool {
     
-    switch (lhs.isSwiftyJSONBool, rhs.isSwiftyJSONBool) {
+    switch (lhs.isBool, rhs.isBool) {
     case (false, true):
         return false
     case (true, false):
@@ -1216,7 +1216,7 @@ func <(lhs: NSNumber, rhs: NSNumber) -> Bool {
 
 func >(lhs: NSNumber, rhs: NSNumber) -> Bool {
     
-    switch (lhs.isSwiftyJSONBool, rhs.isSwiftyJSONBool) {
+    switch (lhs.isBool, rhs.isBool) {
     case (false, true):
         return false
     case (true, false):
@@ -1228,7 +1228,7 @@ func >(lhs: NSNumber, rhs: NSNumber) -> Bool {
 
 func <=(lhs: NSNumber, rhs: NSNumber) -> Bool {
     
-    switch (lhs.isSwiftyJSONBool, rhs.isSwiftyJSONBool) {
+    switch (lhs.isBool, rhs.isBool) {
     case (false, true):
         return false
     case (true, false):
@@ -1240,7 +1240,7 @@ func <=(lhs: NSNumber, rhs: NSNumber) -> Bool {
 
 func >=(lhs: NSNumber, rhs: NSNumber) -> Bool {
     
-    switch (lhs.isSwiftyJSONBool, rhs.isSwiftyJSONBool) {
+    switch (lhs.isBool, rhs.isBool) {
     case (false, true):
         return false
     case (true, false):
