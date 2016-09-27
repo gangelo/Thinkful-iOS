@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-typealias NSURLSessionDataTask = URLSessionDataTask
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
         
         // Alamofire call to fetch location data
         
-        request(url, method: .get).responseJSON { response in
+        Alamofire.request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success(let data):
                 DispatchQueue.main.async(execute: {
