@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var townLabel: UILabel!
     @IBOutlet weak var forecastLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIButton!
     
     var activityIndicatorView:UIActivityIndicatorView? =  nil
     
@@ -21,10 +22,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.townLabel.text = ""
-        self.forecastLabel.text = ""
-      
         callWeatherService()
     }
 
@@ -34,7 +31,10 @@ class ViewController: UIViewController {
     }
     
     func callWeatherService() {
-       let url = "http://api.openweathermap.org/data/2.5/weather?zip=07005,us&appid=\(openWeatherMapAPIKey)"
+        self.townLabel.text = ""
+        self.forecastLabel.text = ""
+
+        let url = "http://api.openweathermap.org/data/2.5/weather?zip=07005,us&appid=\(openWeatherMapAPIKey)"
         
         // Alamofire call to fetch location data
         
@@ -61,12 +61,15 @@ class ViewController: UIViewController {
                     }
                 })
             case .failure(let error):
+                self.endActivityMonitor()
                 print(error)
             }
         }
     }
     
     func startActivityMonitor() {
+        self.refreshButton.isEnabled = false
+        
         // Instantiate a gray Activity Indicator View
         self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         
@@ -82,6 +85,7 @@ class ViewController: UIViewController {
     
     func endActivityMonitor() {
         self.activityIndicatorView!.removeFromSuperview()
+        self.refreshButton.isEnabled = true
     }
     
     func getTownName(json: JSON) -> String? {
@@ -90,6 +94,10 @@ class ViewController: UIViewController {
     
     func getTownWeather(json: JSON) -> String? {
         return json["weather"][0]["description"].string
+    }
+    
+    @IBAction func refreshWeather() {
+        callWeatherService()
     }
 }
 

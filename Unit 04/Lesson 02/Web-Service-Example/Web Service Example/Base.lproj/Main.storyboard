@@ -32,6 +32,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpj-cF-Pfe">
+                                <frame key="frameInset" minX="166" minY="602" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="refresh"/>
+                                <connections>
+                                    <action selector="refreshWeather" destination="BYZ-38-t0r" eventType="touchUpInside" id="ing-hn-y4R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -41,6 +49,7 @@
                     </view>
                     <connections>
                         <outlet property="forecastLabel" destination="Zbw-ql-ScN" id="R6X-Us-rLA"/>
+                        <outlet property="refreshButton" destination="dpj-cF-Pfe" id="vbc-4B-gzK"/>
                         <outlet property="townLabel" destination="X8k-Kb-3Fj" id="2qR-s0-ndn"/>
                     </connections>
                 </viewController>
@@ -49,4 +58,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="refresh" width="128" height="128"/>
+    </resources>
 </document>
