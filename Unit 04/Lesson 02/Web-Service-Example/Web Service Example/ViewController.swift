@@ -12,6 +12,7 @@ import Alamofire
 class ViewController: UIViewController {
     
     // MARK: Properties
+    @IBOutlet weak var townLabel: UILabel!
     @IBOutlet weak var forecastLabel: UILabel!
     
     let openWeatherMapAPIKey = "26dbfb618c1ecc3f6c0018e15705677a"
@@ -43,8 +44,8 @@ class ViewController: UIViewController {
                     townName = self.getTownName(json: json) ?? townName
                     townWeather = self.getTownWeather(json: json) ?? townWeather
                     
-                    
-                    self.forecastLabel.text = "\(townName) \(townWeather)"
+                    self.townLabel.text = townName.localizedCapitalized
+                    self.forecastLabel.text = townWeather.localizedCapitalized
                 })
             case .failure(let error):
                 print(error)

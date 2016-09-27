@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E47376BE1D9A0AF00039F79A /* String+capitalizingFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47376BD1D9A0AF00039F79A /* String+capitalizingFirstLetter.swift */; };
 		E4A93C391D98454F00B774E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A93C381D98454F00B774E8 /* AppDelegate.swift */; };
 		E4A93C3B1D98454F00B774E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A93C3A1D98454F00B774E8 /* ViewController.swift */; };
 		E4A93C3E1D98454F00B774E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A93C3C1D98454F00B774E8 /* Main.storyboard */; };
@@ -108,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E47376BD1D9A0AF00039F79A /* String+capitalizingFirstLetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+capitalizingFirstLetter.swift"; sourceTree = "<group>"; };
 		E4A93C351D98454F00B774E8 /* Web Service Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Web Service Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A93C381D98454F00B774E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4A93C3A1D98454F00B774E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E47376BC1D9A0AB80039F79A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E47376BD1D9A0AF00039F79A /* String+capitalizingFirstLetter.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E4A93C2C1D98454F00B774E8 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		E4A93C371D98454F00B774E8 /* Web Service Example */ = {
 			isa = PBXGroup;
 			children = (
+				E47376BC1D9A0AB80039F79A /* Extensions */,
 				E4C0E5E41D98CA5300607097 /* 3rd-Party Frameworks */,
 				E4A93C381D98454F00B774E8 /* AppDelegate.swift */,
 				E4A93C3A1D98454F00B774E8 /* ViewController.swift */,
@@ -441,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47376BE1D9A0AF00039F79A /* String+capitalizingFirstLetter.swift in Sources */,
 				E4C0E5E21D98CA3800607097 /* SwiftyJSON.swift in Sources */,
 				E4A93C3B1D98454F00B774E8 /* ViewController.swift in Sources */,
 				E4A93C391D98454F00B774E8 /* AppDelegate.swift in Sources */,
