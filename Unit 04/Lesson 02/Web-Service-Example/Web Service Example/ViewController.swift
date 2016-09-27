@@ -15,10 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var townLabel: UILabel!
     @IBOutlet weak var forecastLabel: UILabel!
     
+    var activityIndicatorView:UIActivityIndicatorView? =  nil
+    
     let openWeatherMapAPIKey = "26dbfb618c1ecc3f6c0018e15705677a"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.townLabel.text = ""
+        self.forecastLabel.text = ""
       
         callWeatherService()
     }
@@ -33,24 +38,50 @@ class ViewController: UIViewController {
         
         // Alamofire call to fetch location data
         
+        startActivityMonitor()
+        
         Alamofire.request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success(let data):
                 DispatchQueue.main.async(execute: {
-                    var townName = "Town Unavailable"
-                    var townWeather = "Weather Unavailable"
+                    // Delay for 4 seconds to simulate internet latency so we can see our
+                    // activity monitor at work...
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
+                        self.endActivityMonitor()
                     
-                    let json:JSON = JSON(data)
-                    townName = self.getTownName(json: json) ?? townName
-                    townWeather = self.getTownWeather(json: json) ?? townWeather
+                        var townName = "Town Unavailable"
+                        var townWeather = "Weather Unavailable"
                     
-                    self.townLabel.text = townName.localizedCapitalized
-                    self.forecastLabel.text = townWeather.localizedCapitalized
+                        let json:JSON = JSON(data)
+                        townName = self.getTownName(json: json) ?? townName
+                        townWeather = self.getTownWeather(json: json) ?? townWeather
+                    
+                        self.townLabel.text = townName.localizedCapitalized
+                        self.forecastLabel.text = townWeather.localizedCapitalized
+                    }
                 })
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func startActivityMonitor() {
+        // Instantiate a gray Activity Indicator View
+        self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        
+        // Add the activity to the ViewController's view
+        view.addSubview(self.activityIndicatorView!)
+        
+        // Position the Activity Indicator View in the center of the view
+        self.activityIndicatorView!.center = view.center
+        
+        // Tell the Activity Indicator View to begin animating
+        self.activityIndicatorView!.startAnimating()
+    }
+    
+    func endActivityMonitor() {
+        self.activityIndicatorView!.removeFromSuperview()
     }
     
     func getTownName(json: JSON) -> String? {
