@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     // MARK: Properties
     var activityIndicatorView:UIActivityIndicatorView? =  nil
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     static let flickrAPIKey = "7d8bb9f7520faecd8e1bf908f7ecdde5"
     let flickrSearchParameters = ["method": "flickr.photos.search",
                             "api_key": flickrAPIKey,
@@ -48,7 +50,21 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async(execute: {
                     self.endActivityMonitor()
                     let json:JSON = JSON(data)
-                    print(json)
+                    let imageUrls = self.getImageUrls(json: json)
+                    self.scrollView.contentSize = CGRect(x: 0, y: 0, width: Int(320), height: Int(320 * imageUrls.count)).size
+                    
+                    for (index, photoUrl) in imageUrls.enumerated() {
+                        do {
+                            let imageData:Data? = try Data(contentsOf: URL(string: photoUrl)!)
+                            if let imageDataUnWrapped = imageData {
+                                let image = UIImage(data: imageDataUnWrapped)
+                                let imageView = UIImageView(image: image)
+                                imageView.frame = CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320)
+                                self.scrollView.addSubview(imageView)
+                            }
+                        } catch {
+                        }
+                    }
                 })
             case .failure(let error):
                 self.endActivityMonitor()
@@ -76,6 +92,21 @@ class ViewController: UIViewController {
     func endActivityMonitor() {
         self.activityIndicatorView!.removeFromSuperview()
         //self.refreshButton.isEnabled = true
+    }
+    
+    func getImageUrls(json: JSON) -> [String] {
+        var urls = [String]()
+        
+        for index in 0..<json["photos"]["photo"].count {
+            if let url = json["photos"]["photo"][index]["url_m"].string {
+                urls.append(url)
+            }
+        }
+
+        
+        print(urls)
+        
+        return urls
     }
 }
 
