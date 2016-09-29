@@ -9,6 +9,23 @@
 import UIKit
 import Alamofire
 
+extension UIImageView {
+    func imageFromUrl(url: URL) {
+        DispatchQueue.main.async(execute: {
+            do {
+                let imageData:Data? = try Data(contentsOf: url)
+                if let imageDataUnWrapped = imageData {
+                    let image = UIImage(data: imageDataUnWrapped)
+                    self.image = image
+                }
+            } catch {
+                print("Error: UIImageView.imageFromUrl: The image was not created")
+            }
+        })
+    }
+}
+
+
 class ViewController: UIViewController {
     
     // MARK: Properties
@@ -48,23 +65,27 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(let data):
                 DispatchQueue.main.async(execute: {
-                    self.endActivityMonitor()
                     let json:JSON = JSON(data)
                     let imageUrls = self.getImageUrls(json: json)
+                    
                     self.scrollView.contentSize = CGRect(x: 0, y: 0, width: Int(320), height: Int(320 * imageUrls.count)).size
                     
                     for (index, photoUrl) in imageUrls.enumerated() {
-                        do {
-                            let imageData:Data? = try Data(contentsOf: URL(string: photoUrl)!)
-                            if let imageDataUnWrapped = imageData {
-                                let image = UIImage(data: imageDataUnWrapped)
-                                let imageView = UIImageView(image: image)
-                                imageView.frame = CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320)
+                        if let imageUrl = URL(string: photoUrl) {
+                            //let imageData:Data? = try Data(contentsOf: URL(string: photoUrl)!)
+                            //if let imageDataUnWrapped = imageData {
+                                let imageView = UIImageView(frame: CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320))
+                            
+                                imageView.imageFromUrl(url: imageUrl)
+                                //let imageView = UIImageView(image: image)
+                                //imageView.frame = CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320)
                                 self.scrollView.addSubview(imageView)
-                            }
-                        } catch {
-                        }
+
+                            //}
+                       }
                     }
+                    
+                    self.endActivityMonitor()
                 })
             case .failure(let error):
                 self.endActivityMonitor()
@@ -102,9 +123,6 @@ class ViewController: UIViewController {
                 urls.append(url)
             }
         }
-
-        
-        print(urls)
         
         return urls
     }
