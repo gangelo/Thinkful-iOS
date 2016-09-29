@@ -71,18 +71,10 @@ class ViewController: UIViewController {
                     self.scrollView.contentSize = CGRect(x: 0, y: 0, width: Int(320), height: Int(320 * imageUrls.count)).size
                     
                     for (index, photoUrl) in imageUrls.enumerated() {
-                        if let imageUrl = URL(string: photoUrl) {
-                            //let imageData:Data? = try Data(contentsOf: URL(string: photoUrl)!)
-                            //if let imageDataUnWrapped = imageData {
-                                let imageView = UIImageView(frame: CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320))
-                            
-                                imageView.imageFromUrl(url: imageUrl)
-                                //let imageView = UIImageView(image: image)
-                                //imageView.frame = CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320)
-                                self.scrollView.addSubview(imageView)
-
-                            //}
-                       }
+                        if let imageUrl = URL(string: photoUrl) {                                let imageView = UIImageView(frame: CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320))
+                            imageView.imageFromUrl(url: imageUrl)
+                            self.scrollView.addSubview(imageView)
+                        }
                     }
                     
                     self.endActivityMonitor()
@@ -95,8 +87,6 @@ class ViewController: UIViewController {
     }
     
     func startActivityMonitor() {
-        //self.refreshButton.isEnabled = false
-        
         // Instantiate a gray Activity Indicator View
         self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         
@@ -112,7 +102,6 @@ class ViewController: UIViewController {
     
     func endActivityMonitor() {
         self.activityIndicatorView!.removeFromSuperview()
-        //self.refreshButton.isEnabled = true
     }
     
     func getImageUrls(json: JSON) -> [String] {
