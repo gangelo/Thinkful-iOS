@@ -19,13 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvh-py-fpE"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b1L-UT-Ksu">
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ohI-mw-Tnt"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cvh-py-fpE" secondAttribute="trailing" id="EfJ-Iq-dY8"/>
-                            <constraint firstItem="cvh-py-fpE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fli-uv-Jue"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cvh-py-fpE" secondAttribute="bottom" id="g1n-cD-dzQ"/>
-                            <constraint firstItem="cvh-py-fpE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ka6-fl-QvI"/>
+                            <constraint firstAttribute="trailing" secondItem="b1L-UT-Ksu" secondAttribute="trailing" id="2oT-UY-Y6p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cvh-py-fpE" secondAttribute="bottom" id="559-b1-8qH"/>
+                            <constraint firstItem="b1L-UT-Ksu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9VL-xn-biw"/>
+                            <constraint firstItem="cvh-py-fpE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bw4-f3-v2D"/>
+                            <constraint firstItem="b1L-UT-Ksu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eVF-hA-7Jn"/>
+                            <constraint firstAttribute="trailing" secondItem="cvh-py-fpE" secondAttribute="trailing" id="qDq-4R-F4V"/>
+                            <constraint firstItem="cvh-py-fpE" firstAttribute="top" secondItem="b1L-UT-Ksu" secondAttribute="bottom" id="xvK-kA-Dz6"/>
                         </constraints>
                     </view>
                     <connections>
