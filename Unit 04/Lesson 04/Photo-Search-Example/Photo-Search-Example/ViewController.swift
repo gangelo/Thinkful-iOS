@@ -14,6 +14,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
    // MARK: Properties
    @IBOutlet weak var scrollView: UIScrollView!
    
+   var imageWidth:CGFloat = 0
+   
    static let flickrAPIKey = "7d8bb9f7520faecd8e1bf908f7ecdde5"
    var activityIndicatorView:UIActivityIndicatorView? =  nil
    var flickrSearchParameters = ["method": "flickr.photos.search",
@@ -26,6 +28,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      self.imageWidth = view.frame.width
    }
    
    override func didReceiveMemoryWarning() {
@@ -64,14 +67,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
                let json:JSON = JSON(data)
                let imageUrls = self.extractImageUrlsFrom(json: json)
                
-               self.scrollView.contentSize = CGRect(x: 0, y: 0, width: Int(320), height: Int(320 * imageUrls.count)).size
+               self.scrollView.contentSize = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.imageWidth, height: CGFloat(self.imageWidth * CGFloat(imageUrls.count))).size
                
                for (index, photoUrl) in imageUrls.enumerated() {
-                  if let imageUrl = URL(string: photoUrl) {                                let imageView = UIImageView(frame: CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320))
+                  if let imageUrl = URL(string: photoUrl) {                                let imageView = UIImageView(frame: CGRect(x: 0, y: self.imageWidth * CGFloat(index), width: self.imageWidth, height: self.imageWidth))
                      self.scrollView.addSubview(imageView)
                      imageView.imageFromUrl(url: imageUrl)
                   }
                }
+
                
                self.endActivityMonitor()
             })
@@ -83,6 +87,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
    }
    
    func startActivityMonitor() {
+      // End any activity monitors already started
+      self.endActivityMonitor()
+      
       // Instantiate a gray Activity Indicator View
       self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
       
@@ -97,7 +104,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
    }
    
    func endActivityMonitor() {
-      self.activityIndicatorView!.removeFromSuperview()
+      if let activityMonitor = self.activityIndicatorView {
+         activityMonitor.removeFromSuperview()
+      }
    }
    
    func extractImageUrlsFrom(json: JSON) -> [String] {
