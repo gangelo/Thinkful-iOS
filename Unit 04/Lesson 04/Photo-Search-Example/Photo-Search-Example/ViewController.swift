@@ -36,7 +36,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
       if let searchText = searchBar.text {
          searchBar.resignFirstResponder()
-         //scrollView.scrollRectToVisible(rect: CGMakeR, animated: <#T##Bool#>)
          scrollView.setContentOffset(CGPoint.zero, animated: true)
          searchFlickrBy(searchText: searchText)
       }
@@ -69,8 +68,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
                
                for (index, photoUrl) in imageUrls.enumerated() {
                   if let imageUrl = URL(string: photoUrl) {                                let imageView = UIImageView(frame: CGRect(x: 0, y: 320 * CGFloat(index), width: 320, height: 320))
-                     imageView.imageFromUrl(url: imageUrl)
                      self.scrollView.addSubview(imageView)
+                     imageView.imageFromUrl(url: imageUrl)
                   }
                }
                
