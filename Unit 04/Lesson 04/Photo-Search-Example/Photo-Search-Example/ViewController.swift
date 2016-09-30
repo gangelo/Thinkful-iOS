@@ -106,6 +106,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
    func endActivityMonitor() {
       if let activityMonitor = self.activityIndicatorView {
          activityMonitor.removeFromSuperview()
+         self.activityIndicatorView = nil
       }
    }
    
