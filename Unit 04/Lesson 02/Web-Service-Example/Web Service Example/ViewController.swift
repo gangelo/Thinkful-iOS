@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     var activityIndicatorView:UIActivityIndicatorView? =  nil
     
-    let openWeatherMapAPIKey = "26dbfb618c1ecc3f6c0018e15705677a"
+    let openWeatherMapAPIKey = "YOUR_KEY"
     
     override func viewDidLoad() {
         super.viewDidLoad()
