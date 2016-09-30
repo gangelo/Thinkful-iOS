@@ -36,11 +36,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
       if let searchText = searchBar.text {
          searchBar.resignFirstResponder()
+         //scrollView.scrollRectToVisible(rect: CGMakeR, animated: <#T##Bool#>)
+         scrollView.setContentOffset(CGPoint.zero, animated: true)
          searchFlickrBy(searchText: searchText)
       }
    }
    
-   func updateSearchCriteria(searchText: String) {
+   func updateSearchCriteriaWith(searchText: String) {
       flickrSearchParameters["text"] = searchText
    }
    
@@ -48,7 +50,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
       startActivityMonitor()
       
       // Update the search criteria
-      updateSearchCriteria(searchText: searchText)
+      updateSearchCriteriaWith(searchText: searchText)
       
       // Remove our subviews from the last search
       self.scrollView.subviews.removeAllSubviews()
