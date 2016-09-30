@@ -16,7 +16,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
    
    var imageWidth:CGFloat = 0
    
-   static let flickrAPIKey = "7d8bb9f7520faecd8e1bf908f7ecdde5"
+   static let flickrAPIKey = "YOUR_KEY"
    var activityIndicatorView:UIActivityIndicatorView? =  nil
    var flickrSearchParameters = ["method": "flickr.photos.search",
                                  "api_key": flickrAPIKey,
